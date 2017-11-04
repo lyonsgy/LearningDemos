@@ -15,6 +15,8 @@
 		2BB4D49F1FADA4D700442BB4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB4D49E1FADA4D700442BB4 /* main.m */; };
 		2BB4D4A91FADA4D700442BB4 /* PrintDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB4D4A81FADA4D700442BB4 /* PrintDemoTests.m */; };
 		2BB4D4B41FADA4D700442BB4 /* PrintDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB4D4B31FADA4D700442BB4 /* PrintDemoUITests.m */; };
+		2BB4D4C31FADA5B000442BB4 /* GYManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB4D4C21FADA5B000442BB4 /* GYManager.m */; };
+		2BB4D4C61FADA5C900442BB4 /* GYEmployee.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB4D4C51FADA5C900442BB4 /* GYEmployee.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,11 @@
 		2BB4D4AF1FADA4D700442BB4 /* PrintDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrintDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BB4D4B31FADA4D700442BB4 /* PrintDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrintDemoUITests.m; sourceTree = "<group>"; };
 		2BB4D4B51FADA4D700442BB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BB4D4C11FADA5B000442BB4 /* GYManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYManager.h; sourceTree = "<group>"; };
+		2BB4D4C21FADA5B000442BB4 /* GYManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYManager.m; sourceTree = "<group>"; };
+		2BB4D4C41FADA5C900442BB4 /* GYEmployee.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYEmployee.h; sourceTree = "<group>"; };
+		2BB4D4C51FADA5C900442BB4 /* GYEmployee.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYEmployee.m; sourceTree = "<group>"; };
+		2BB4D4C71FADAA1800442BB4 /* GYPrintNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYPrintNotification.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +108,15 @@
 		2BB4D48E1FADA4D700442BB4 /* PrintDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2BB4D4C71FADAA1800442BB4 /* GYPrintNotification.h */,
 				2BB4D48F1FADA4D700442BB4 /* AppDelegate.h */,
 				2BB4D4901FADA4D700442BB4 /* AppDelegate.m */,
 				2BB4D4921FADA4D700442BB4 /* ViewController.h */,
 				2BB4D4931FADA4D700442BB4 /* ViewController.m */,
+				2BB4D4C11FADA5B000442BB4 /* GYManager.h */,
+				2BB4D4C21FADA5B000442BB4 /* GYManager.m */,
+				2BB4D4C41FADA5C900442BB4 /* GYEmployee.h */,
+				2BB4D4C51FADA5C900442BB4 /* GYEmployee.m */,
 				2BB4D4951FADA4D700442BB4 /* Main.storyboard */,
 				2BB4D4981FADA4D700442BB4 /* Assets.xcassets */,
 				2BB4D49A1FADA4D700442BB4 /* LaunchScreen.storyboard */,
@@ -266,7 +278,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BB4D4941FADA4D700442BB4 /* ViewController.m in Sources */,
+				2BB4D4C31FADA5B000442BB4 /* GYManager.m in Sources */,
 				2BB4D49F1FADA4D700442BB4 /* main.m in Sources */,
+				2BB4D4C61FADA5C900442BB4 /* GYEmployee.m in Sources */,
 				2BB4D4911FADA4D700442BB4 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
