@@ -15,6 +15,9 @@
 		2BB4D4E41FADAD8B00442BB4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB4D4E31FADAD8B00442BB4 /* main.m */; };
 		2BB4D4EE1FADAD8C00442BB4 /* MVCDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB4D4ED1FADAD8C00442BB4 /* MVCDemoTests.m */; };
 		2BB4D4F91FADAD8C00442BB4 /* MVCDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB4D4F81FADAD8C00442BB4 /* MVCDemoUITests.m */; };
+		2BD34DFC1FAF660400F5F470 /* MVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD34DFB1FAF660400F5F470 /* MVCViewController.m */; };
+		2BD34DFF1FAF677400F5F470 /* MVCView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD34DFE1FAF677400F5F470 /* MVCView.m */; };
+		2BD34E021FAF67B400F5F470 /* MVCPaper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD34E011FAF67B400F5F470 /* MVCPaper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		2BB4D4F41FADAD8C00442BB4 /* MVCDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVCDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BB4D4F81FADAD8C00442BB4 /* MVCDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVCDemoUITests.m; sourceTree = "<group>"; };
 		2BB4D4FA1FADAD8C00442BB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BD34DFA1FAF660400F5F470 /* MVCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVCViewController.h; sourceTree = "<group>"; };
+		2BD34DFB1FAF660400F5F470 /* MVCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVCViewController.m; sourceTree = "<group>"; };
+		2BD34DFD1FAF677400F5F470 /* MVCView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVCView.h; sourceTree = "<group>"; };
+		2BD34DFE1FAF677400F5F470 /* MVCView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVCView.m; sourceTree = "<group>"; };
+		2BD34E001FAF67B400F5F470 /* MVCPaper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVCPaper.h; sourceTree = "<group>"; };
+		2BD34E011FAF67B400F5F470 /* MVCPaper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVCPaper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +114,12 @@
 				2BB4D4D51FADAD8B00442BB4 /* AppDelegate.m */,
 				2BB4D4D71FADAD8B00442BB4 /* ViewController.h */,
 				2BB4D4D81FADAD8B00442BB4 /* ViewController.m */,
+				2BD34DFA1FAF660400F5F470 /* MVCViewController.h */,
+				2BD34DFB1FAF660400F5F470 /* MVCViewController.m */,
+				2BD34DFD1FAF677400F5F470 /* MVCView.h */,
+				2BD34DFE1FAF677400F5F470 /* MVCView.m */,
+				2BD34E001FAF67B400F5F470 /* MVCPaper.h */,
+				2BD34E011FAF67B400F5F470 /* MVCPaper.m */,
 				2BB4D4DA1FADAD8B00442BB4 /* Main.storyboard */,
 				2BB4D4DD1FADAD8B00442BB4 /* Assets.xcassets */,
 				2BB4D4DF1FADAD8B00442BB4 /* LaunchScreen.storyboard */,
@@ -266,8 +281,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BB4D4D91FADAD8B00442BB4 /* ViewController.m in Sources */,
+				2BD34E021FAF67B400F5F470 /* MVCPaper.m in Sources */,
 				2BB4D4E41FADAD8B00442BB4 /* main.m in Sources */,
 				2BB4D4D61FADAD8B00442BB4 /* AppDelegate.m in Sources */,
+				2BD34DFC1FAF660400F5F470 /* MVCViewController.m in Sources */,
+				2BD34DFF1FAF677400F5F470 /* MVCView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
