@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GYView.h"
+#import "GYModel.h"
 
 @interface GYPresenter : NSObject
+@property(nonatomic, strong) GYView *view;
+@property(nonatomic, strong) GYModel *model;
 
+
+- (void)printTask;
 @end

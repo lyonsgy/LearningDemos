@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GYView : UIView
+@protocol GYViewDelegate <NSObject>
 
+- (void)opPrintBtnClick;
+
+@end
+
+
+@interface GYView : UIView
+@property(nonatomic ,weak) id<GYViewDelegate> delegate;
+
+- (void)printOnView:(NSString *)content;
 @end

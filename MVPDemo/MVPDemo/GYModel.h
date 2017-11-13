@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface GYModel : NSObject
+@property(nonatomic, strong) NSString *content;
 
 @end

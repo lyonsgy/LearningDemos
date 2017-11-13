@@ -12,6 +12,9 @@
 #import "GYModel.h"
 
 @interface MVPViewController ()
+@property(nonatomic, strong) GYPresenter *presenter;
+@property(nonatomic, strong) GYView *mvpView;
+@property(nonatomic, strong) GYModel *mvpModel;
 
 @end
 
@@ -19,7 +22,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+        
+    self.mvpView = [GYView new];
+    _mvpView.frame = self.view.bounds;
+    [self.view addSubview:_mvpView];
+    
+    self.mvpModel = [GYModel new];
+    _mvpModel.content = @"line 0";
+    self.presenter = [GYPresenter new];
+    _presenter.view = _mvpView;
+    _presenter.model = _mvpModel;
+    
+    _mvpView.delegate = _presenter;
+    
+    [_presenter printTask];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,14 +43,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
