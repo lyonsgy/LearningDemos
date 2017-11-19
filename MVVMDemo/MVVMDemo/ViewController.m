@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "MVVMViewController.h"
 
 @interface ViewController ()
 
@@ -16,9 +17,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self showMVVM];
+    });
+    
 }
 
+- (void)showMVVM
+{
+    MVVMViewController *vc = [MVVMViewController new];
+    [self presentViewController:vc animated:true completion:nil];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
