@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "LPZRequest.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [[LPZRequest request] GET:@"" parameters:@{} callBack:^(LPZRequest *request, NSString *responseString, NSError *error) {
+        if (!error) {
+            
+        }else{
+            
+        }
+    }];
 }
 
 

@@ -7,7 +7,91 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AFNetworking.h"
+
+
+typedef NS_ENUM(NSUInteger, LPZRequestMethod) {
+    LPZRequestMethodGET=0,
+    LPZRequestMethodPOST,
+    LPZRequestMethodPUT,
+    LPZRequestMethodDELETE
+};
 
 @interface LPZRequest : NSObject
+/**
+ *[AFNetWorking]的operationManager对象
+ */
+@property (nonatomic, strong) AFHTTPSessionManager* operationManager;
+
+/**
+ *当前的请求operation队列
+ */
+@property (nonatomic, strong) NSOperationQueue* operationQueue;
+
++ (instancetype)request;
+
+/**
+ GET请求
+ 
+ @param URLString 请求的url
+ @param requestMethod 请求类型
+ @param parameters GET请求体参数
+ @param callBack 请求返回体
+ */
+- (void)request:(NSString *)URLString
+  requestMethod:(LPZRequestMethod)requestMethod
+     parameters:(NSDictionary*)parameters
+       callBack:(void (^)(LPZRequest *request, NSString *responseString, NSError *error))callBack;
+
+/**
+ GET请求
+ 
+ @param URLString 请求的url
+ @param parameters GET请求体参数
+ @param callBack 请求返回体
+ */
+- (void)GET:(NSString *)URLString
+ parameters:(NSDictionary*)parameters
+   callBack:(void (^)(LPZRequest *request, NSString *responseString, NSError *error))callBack;
+
+/**
+ POST请求
+ 
+ @param URLString 请求的url
+ @param parameters POST请求体参数
+ @param callBack 请求返回体
+ */
+- (void)POST:(NSString *)URLString
+  parameters:(NSDictionary*)parameters
+    callBack:(void (^)(LPZRequest *request, NSString *responseString, NSError *error))callBack;
+
+/**
+ PUT请求
+ 
+ @param URLString 请求的url
+ @param parameters PUT请求体参数
+ @param callBack 请求返回体
+ */
+- (void)PUT:(NSString *)URLString
+ parameters:(NSDictionary*)parameters
+   callBack:(void (^)(LPZRequest *request, NSString *responseString, NSError *error))callBack;
+
+/**
+ DELETE请求
+ 
+ @param URLString 请求的url
+ @param parameters DELETE请求体参数
+ @param callBack 请求返回体
+ */
+- (void)DELETE:(NSString *)URLString
+    parameters:(NSDictionary*)parameters
+      callBack:(void (^)(LPZRequest *request, NSString *responseString, NSError *error))callBack;
+
+
+
+/**
+ *取消当前请求队列的所有请求
+ */
+- (void)cancelAllOperations;
 
 @end
