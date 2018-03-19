@@ -22,37 +22,21 @@
 }
 
 - (void)request:(NSString *)URLString
-  requestMethod:(LPZRequestMethod)requestMethod
+  requestMethod:(LPZRequestMethod)requestMethods
      parameters:(NSDictionary*)parameters
+       progress:(void (^)(NSProgress *progess))downloadProgress
        callBack:(void (^)(LPZRequest *request, NSString *responseString, NSError *error))callBack
 {
-    switch (requestMethod) {
-        case LPZRequestMethodGET:
-        {
-        }
-            break;
-        case LPZRequestMethodPOST:
-        {
-            
-        }
-            break;
-        case LPZRequestMethodPUT:
-        {
-            
-        }
-            break;
-        case LPZRequestMethodDELETE:
-        {
-            
-        }
-            break;
-        default:
-            break;
-    }
-//    NSURLSessionDataTask *dataTask = [self dataTaskWithHTTPMethod:@"PUT" URLString:URLString parameters:parameters uploadProgress:nil downloadProgress:nil success:success failure:failure];
-//
-//    [dataTask resume];
-    
+    [self request:URLString requestMethod:requestMethods parameters:parameters progress:downloadProgress success:^(NSURLSessionDataTask *task, id responseObject) {
+        
+        NSString *responseJson = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        callBack(self,responseJson,nil);
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        
+        callBack(self,nil,error);
+        
+    }];
 }
 
 - (void)GET:(NSString *)URLString
@@ -63,14 +47,14 @@
     self.operationManager.responseSerializer = [AFHTTPResponseSerializer serializer];
     
     
-    [self.operationManager GET:URLString parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+    [self.operationManager GET:URLString parameters:parameters progress:^(NSProgress *downloadProgress) {
         
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    } success:^(NSURLSessionDataTask *task, id responseObject) {
         
         NSString *responseJson = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
         callBack(self,responseJson,nil);
         
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
         
         callBack(self,nil,error);
     }];
@@ -83,14 +67,14 @@
     self.operationQueue = self.operationManager.operationQueue;
     self.operationManager.responseSerializer = [AFHTTPResponseSerializer serializer];
     
-    [self.operationManager POST:URLString parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
+    [self.operationManager POST:URLString parameters:parameters progress:^(NSProgress *uploadProgress) {
         
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    } success:^(NSURLSessionDataTask *task, id responseObject) {
         
         NSString* responseJson = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
         callBack(self,responseJson,nil);
         
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
         
         callBack(self,nil,error);
     }];
@@ -103,12 +87,12 @@
     self.operationQueue = self.operationManager.operationQueue;
     self.operationManager.responseSerializer = [AFHTTPResponseSerializer serializer];
     
-    [self.operationManager PUT:URLString parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [self.operationManager PUT:URLString parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
         
         NSString* responseJson = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
         callBack(self,responseJson,nil);
         
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
         
         callBack(self,nil,error);
         
@@ -122,16 +106,49 @@
     self.operationQueue = self.operationManager.operationQueue;
     self.operationManager.responseSerializer = [AFHTTPResponseSerializer serializer];
     
-    [self.operationManager DELETE:URLString parameters:parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [self.operationManager DELETE:URLString parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
         
         NSString* responseJson = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
         callBack(self,responseJson,nil);
         
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
         
         callBack(self,nil,error);
         
     }];
+}
+
+- (void)request:(NSString *)URLString
+  requestMethod:(LPZRequestMethod)requestMethods
+     parameters:(NSDictionary*)parameters
+       progress:(void (^)(NSProgress *progress))downloadProgress
+        success:(void (^)(NSURLSessionDataTask *task, id  responseObject))success
+        failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure
+{
+    switch (requestMethods) {
+        case LPZRequestMethodGET:
+        {
+            [self.operationManager GET:URLString parameters:parameters progress:downloadProgress success:success failure:failure];
+        }
+            break;
+        case LPZRequestMethodPOST:
+        {
+            [self.operationManager POST:URLString parameters:parameters progress:downloadProgress success:success failure:failure];
+        }
+            break;
+        case LPZRequestMethodPUT:
+        {
+            [self.operationManager PUT:URLString parameters:parameters success:success failure:failure];
+        }
+            break;
+        case LPZRequestMethodDELETE:
+        {
+            [self.operationManager DELETE:URLString parameters:parameters success:success failure:failure];
+        }
+            break;
+        default:
+            break;
+    }
 }
 
 - (void)cancelAllOperations{

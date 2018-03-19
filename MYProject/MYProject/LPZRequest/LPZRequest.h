@@ -21,7 +21,7 @@ typedef NS_ENUM(NSUInteger, LPZRequestMethod) {
 /**
  *[AFNetWorking]的operationManager对象
  */
-@property (nonatomic, strong) AFHTTPSessionManager* operationManager;
+@property (nonatomic, strong) AFHTTPSessionManager * operationManager;
 
 /**
  *当前的请求operation队列
@@ -30,18 +30,21 @@ typedef NS_ENUM(NSUInteger, LPZRequestMethod) {
 
 + (instancetype)request;
 
+
 /**
- GET请求
+ 普通请求
  
  @param URLString 请求的url
  @param requestMethod 请求类型
- @param parameters GET请求体参数
+ @param parameters 请求体参数
+ @param downloadProgress 下载进度
  @param callBack 请求返回体
  */
 - (void)request:(NSString *)URLString
-  requestMethod:(LPZRequestMethod)requestMethod
+  requestMethod:(LPZRequestMethod)requestMethods
      parameters:(NSDictionary*)parameters
-       callBack:(void (^)(LPZRequest *request, NSString *responseString, NSError *error))callBack;
+       progress:(void (^)(NSProgress *progess))downloadProgress
+       callBack:(void (^)(LPZRequest * _Nullable request, NSString * _Nullable responseString, NSError * _Nonnull error))callBack;
 
 /**
  GET请求
@@ -52,7 +55,7 @@ typedef NS_ENUM(NSUInteger, LPZRequestMethod) {
  */
 - (void)GET:(NSString *)URLString
  parameters:(NSDictionary*)parameters
-   callBack:(void (^)(LPZRequest *request, NSString *responseString, NSError *error))callBack;
+   callBack:(void (^_Nonnull)(LPZRequest * _Nonnull request, NSString * _Nonnull responseString, NSError * _Nullable error))callBack;
 
 /**
  POST请求
@@ -62,7 +65,7 @@ typedef NS_ENUM(NSUInteger, LPZRequestMethod) {
  @param callBack 请求返回体
  */
 - (void)POST:(NSString *)URLString
-  parameters:(NSDictionary*)parameters
+  parameters:(NSDictionary *)parameters
     callBack:(void (^)(LPZRequest *request, NSString *responseString, NSError *error))callBack;
 
 /**
@@ -86,7 +89,6 @@ typedef NS_ENUM(NSUInteger, LPZRequestMethod) {
 - (void)DELETE:(NSString *)URLString
     parameters:(NSDictionary*)parameters
       callBack:(void (^)(LPZRequest *request, NSString *responseString, NSError *error))callBack;
-
 
 
 /**

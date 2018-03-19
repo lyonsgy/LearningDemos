@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "LPZRequest.h"
+#import "Masonry.h"
 
 @interface ViewController ()
 
@@ -23,6 +24,18 @@
         }else{
             
         }
+    }];
+    
+    [[LPZRequest request] request:@"" requestMethod:(LPZRequestMethodGET) parameters:@{} progress:^(NSProgress *progess) {
+        
+    } callBack:^(LPZRequest * _Nullable request, NSString * _Nullable responseString, NSError * _Nonnull error) {
+        
+    }];
+    
+    UIView *view = [UIView new];
+    [self.view addSubview:view];
+    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.view.mas_top).with.offset(0);
     }];
 }
 
