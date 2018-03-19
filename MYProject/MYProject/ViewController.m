@@ -7,8 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "LPZRequest.h"
 #import "Masonry.h"
+#import "LPZRequestManager.h"
 
 @interface ViewController ()
 
@@ -18,25 +18,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[LPZRequest request] GET:@"" parameters:@{} callBack:^(LPZRequest *request, NSString *responseString, NSError *error) {
-        if (!error) {
-            
-        }else{
-            
-        }
-    }];
-    
-    [[LPZRequest request] request:@"" requestMethod:(LPZRequestMethodGET) parameters:@{} progress:^(NSProgress *progess) {
-        
-    } callBack:^(LPZRequest * _Nullable request, NSString * _Nullable responseString, NSError * _Nonnull error) {
-        
-    }];
     
     UIView *view = [UIView new];
     [self.view addSubview:view];
     [view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.view.mas_top).with.offset(0);
     }];
+    
+    
+    [[LPZRequestManager request] GET:@"" parameters:@{} callBack:^(LPZRequestManager * _Nonnull request, NSString * _Nonnull responseString, NSError * _Nullable error) {
+        
+    }];
+
 }
 
 

@@ -1,14 +1,15 @@
 //
-//  LPZRequest.m
+//  LPZRequestManager.m
 //  MYProject
 //
 //  Created by lyons on 2018/3/8.
 //  Copyright © 2018年 GY. All rights reserved.
 //
 
-#import "LPZRequest.h"
+#import "LPZRequestManager.h"
 
-@implementation LPZRequest
+@implementation LPZRequestManager
+
 + (instancetype)request {
     return [[self alloc] init];
 }
@@ -17,6 +18,8 @@
     self = [super init];
     if (self) {
         self.operationManager = [AFHTTPSessionManager manager];
+        [self.operationManager.requestSerializer setValue:@"" forHTTPHeaderField:@"token"];//TODO:
+        
     }
     return self;
 }
@@ -25,96 +28,96 @@
   requestMethod:(LPZRequestMethod)requestMethods
      parameters:(NSDictionary*)parameters
        progress:(void (^)(NSProgress *progess))downloadProgress
-       callBack:(void (^)(LPZRequest *request, NSString *responseString, NSError *error))callBack
+       callBack:(void (^)(LPZRequestManager *request, NSString *responseString, NSError *error))callBack
 {
     [self request:URLString requestMethod:requestMethods parameters:parameters progress:downloadProgress success:^(NSURLSessionDataTask *task, id responseObject) {
-        
+
         NSString *responseJson = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
         callBack(self,responseJson,nil);
-        
+
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        
+
         callBack(self,nil,error);
-        
+
     }];
 }
 
 - (void)GET:(NSString *)URLString
  parameters:(NSDictionary*)parameters
-   callBack:(void (^)(LPZRequest *request, NSString *responseString, NSError *error))callBack
+   callBack:(void (^)(LPZRequestManager *request, NSString *responseString, NSError *error))callBack
 {
     self.operationQueue=self.operationManager.operationQueue;
     self.operationManager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    
-    
+
+
     [self.operationManager GET:URLString parameters:parameters progress:^(NSProgress *downloadProgress) {
-        
+
     } success:^(NSURLSessionDataTask *task, id responseObject) {
-        
+
         NSString *responseJson = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
         callBack(self,responseJson,nil);
-        
+
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        
+
         callBack(self,nil,error);
     }];
 }
 
 - (void)POST:(NSString *)URLString
   parameters:(NSDictionary*)parameters
-    callBack:(void (^)(LPZRequest *request, NSString *responseString, NSError *error))callBack
+    callBack:(void (^)(LPZRequestManager *request, NSString *responseString, NSError *error))callBack
 {
     self.operationQueue = self.operationManager.operationQueue;
     self.operationManager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    
+
     [self.operationManager POST:URLString parameters:parameters progress:^(NSProgress *uploadProgress) {
-        
+
     } success:^(NSURLSessionDataTask *task, id responseObject) {
-        
+
         NSString* responseJson = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
         callBack(self,responseJson,nil);
-        
+
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        
+
         callBack(self,nil,error);
     }];
 }
 
 - (void)PUT:(NSString *)URLString
  parameters:(NSDictionary*)parameters
-   callBack:(void (^)(LPZRequest *request, NSString *responseString, NSError *error))callBack
+   callBack:(void (^)(LPZRequestManager *request, NSString *responseString, NSError *error))callBack
 {
     self.operationQueue = self.operationManager.operationQueue;
     self.operationManager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    
+
     [self.operationManager PUT:URLString parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
-        
+
         NSString* responseJson = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
         callBack(self,responseJson,nil);
-        
+
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        
+
         callBack(self,nil,error);
-        
+
     }];
 }
 
 - (void)DELETE:(NSString *)URLString
     parameters:(NSDictionary*)parameters
-      callBack:(void (^)(LPZRequest *request, NSString *responseString, NSError *error))callBack
+      callBack:(void (^)(LPZRequestManager *request, NSString *responseString, NSError *error))callBack
 {
     self.operationQueue = self.operationManager.operationQueue;
     self.operationManager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    
+
     [self.operationManager DELETE:URLString parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
-        
+
         NSString* responseJson = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
         callBack(self,responseJson,nil);
-        
+
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        
+
         callBack(self,nil,error);
-        
+
     }];
 }
 
