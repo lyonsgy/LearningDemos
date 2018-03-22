@@ -1,0 +1,565 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B20FCDD20635FDF00596054 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B20FCDC20635FDF00596054 /* AppDelegate.m */; };
+		2B20FCE020635FDF00596054 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B20FCDF20635FDF00596054 /* ViewController.m */; };
+		2B20FCE320635FDF00596054 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B20FCE120635FDF00596054 /* Main.storyboard */; };
+		2B20FCE520635FDF00596054 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B20FCE420635FDF00596054 /* Assets.xcassets */; };
+		2B20FCE820635FDF00596054 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B20FCE620635FDF00596054 /* LaunchScreen.storyboard */; };
+		2B20FCEB20635FDF00596054 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B20FCEA20635FDF00596054 /* main.m */; };
+		2B20FCF520635FE000596054 /* GYTimerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B20FCF420635FE000596054 /* GYTimerTests.m */; };
+		2B20FD0020635FE000596054 /* GYTimerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B20FCFF20635FE000596054 /* GYTimerUITests.m */; };
+		2B20FD102063602400596054 /* GYTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B20FD0F2063602400596054 /* GYTimer.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2B20FCF120635FE000596054 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B20FCD020635FDF00596054 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B20FCD720635FDF00596054;
+			remoteInfo = GYTimer;
+		};
+		2B20FCFC20635FE000596054 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B20FCD020635FDF00596054 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B20FCD720635FDF00596054;
+			remoteInfo = GYTimer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2B20FCD820635FDF00596054 /* GYTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GYTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B20FCDB20635FDF00596054 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2B20FCDC20635FDF00596054 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2B20FCDE20635FDF00596054 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2B20FCDF20635FDF00596054 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2B20FCE220635FDF00596054 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2B20FCE420635FDF00596054 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B20FCE720635FDF00596054 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2B20FCE920635FDF00596054 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B20FCEA20635FDF00596054 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2B20FCF020635FE000596054 /* GYTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GYTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B20FCF420635FE000596054 /* GYTimerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYTimerTests.m; sourceTree = "<group>"; };
+		2B20FCF620635FE000596054 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B20FCFB20635FE000596054 /* GYTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GYTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B20FCFF20635FE000596054 /* GYTimerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYTimerUITests.m; sourceTree = "<group>"; };
+		2B20FD0120635FE000596054 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B20FD0E2063602400596054 /* GYTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYTimer.h; sourceTree = "<group>"; };
+		2B20FD0F2063602400596054 /* GYTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYTimer.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B20FCD520635FDF00596054 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B20FCED20635FE000596054 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B20FCF820635FE000596054 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B20FCCF20635FDF00596054 = {
+			isa = PBXGroup;
+			children = (
+				2B20FCDA20635FDF00596054 /* GYTimer */,
+				2B20FCF320635FE000596054 /* GYTimerTests */,
+				2B20FCFE20635FE000596054 /* GYTimerUITests */,
+				2B20FCD920635FDF00596054 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2B20FCD920635FDF00596054 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B20FCD820635FDF00596054 /* GYTimer.app */,
+				2B20FCF020635FE000596054 /* GYTimerTests.xctest */,
+				2B20FCFB20635FE000596054 /* GYTimerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B20FCDA20635FDF00596054 /* GYTimer */ = {
+			isa = PBXGroup;
+			children = (
+				2B20FD0D2063602400596054 /* GYTimer */,
+				2B20FCDB20635FDF00596054 /* AppDelegate.h */,
+				2B20FCDC20635FDF00596054 /* AppDelegate.m */,
+				2B20FCDE20635FDF00596054 /* ViewController.h */,
+				2B20FCDF20635FDF00596054 /* ViewController.m */,
+				2B20FCE120635FDF00596054 /* Main.storyboard */,
+				2B20FCE420635FDF00596054 /* Assets.xcassets */,
+				2B20FCE620635FDF00596054 /* LaunchScreen.storyboard */,
+				2B20FCE920635FDF00596054 /* Info.plist */,
+				2B20FCEA20635FDF00596054 /* main.m */,
+			);
+			path = GYTimer;
+			sourceTree = "<group>";
+		};
+		2B20FCF320635FE000596054 /* GYTimerTests */ = {
+			isa = PBXGroup;
+			children = (
+				2B20FCF420635FE000596054 /* GYTimerTests.m */,
+				2B20FCF620635FE000596054 /* Info.plist */,
+			);
+			path = GYTimerTests;
+			sourceTree = "<group>";
+		};
+		2B20FCFE20635FE000596054 /* GYTimerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2B20FCFF20635FE000596054 /* GYTimerUITests.m */,
+				2B20FD0120635FE000596054 /* Info.plist */,
+			);
+			path = GYTimerUITests;
+			sourceTree = "<group>";
+		};
+		2B20FD0D2063602400596054 /* GYTimer */ = {
+			isa = PBXGroup;
+			children = (
+				2B20FD0E2063602400596054 /* GYTimer.h */,
+				2B20FD0F2063602400596054 /* GYTimer.m */,
+			);
+			path = GYTimer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B20FCD720635FDF00596054 /* GYTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B20FD0420635FE000596054 /* Build configuration list for PBXNativeTarget "GYTimer" */;
+			buildPhases = (
+				2B20FCD420635FDF00596054 /* Sources */,
+				2B20FCD520635FDF00596054 /* Frameworks */,
+				2B20FCD620635FDF00596054 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GYTimer;
+			productName = GYTimer;
+			productReference = 2B20FCD820635FDF00596054 /* GYTimer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2B20FCEF20635FE000596054 /* GYTimerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B20FD0720635FE000596054 /* Build configuration list for PBXNativeTarget "GYTimerTests" */;
+			buildPhases = (
+				2B20FCEC20635FE000596054 /* Sources */,
+				2B20FCED20635FE000596054 /* Frameworks */,
+				2B20FCEE20635FE000596054 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B20FCF220635FE000596054 /* PBXTargetDependency */,
+			);
+			name = GYTimerTests;
+			productName = GYTimerTests;
+			productReference = 2B20FCF020635FE000596054 /* GYTimerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2B20FCFA20635FE000596054 /* GYTimerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B20FD0A20635FE000596054 /* Build configuration list for PBXNativeTarget "GYTimerUITests" */;
+			buildPhases = (
+				2B20FCF720635FE000596054 /* Sources */,
+				2B20FCF820635FE000596054 /* Frameworks */,
+				2B20FCF920635FE000596054 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B20FCFD20635FE000596054 /* PBXTargetDependency */,
+			);
+			name = GYTimerUITests;
+			productName = GYTimerUITests;
+			productReference = 2B20FCFB20635FE000596054 /* GYTimerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B20FCD020635FDF00596054 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = lyons;
+				TargetAttributes = {
+					2B20FCD720635FDF00596054 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					2B20FCEF20635FE000596054 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2B20FCD720635FDF00596054;
+					};
+					2B20FCFA20635FE000596054 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2B20FCD720635FDF00596054;
+					};
+				};
+			};
+			buildConfigurationList = 2B20FCD320635FDF00596054 /* Build configuration list for PBXProject "GYTimer" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2B20FCCF20635FDF00596054;
+			productRefGroup = 2B20FCD920635FDF00596054 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B20FCD720635FDF00596054 /* GYTimer */,
+				2B20FCEF20635FE000596054 /* GYTimerTests */,
+				2B20FCFA20635FE000596054 /* GYTimerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B20FCD620635FDF00596054 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B20FCE820635FDF00596054 /* LaunchScreen.storyboard in Resources */,
+				2B20FCE520635FDF00596054 /* Assets.xcassets in Resources */,
+				2B20FCE320635FDF00596054 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B20FCEE20635FE000596054 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B20FCF920635FE000596054 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B20FCD420635FDF00596054 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B20FCE020635FDF00596054 /* ViewController.m in Sources */,
+				2B20FD102063602400596054 /* GYTimer.m in Sources */,
+				2B20FCEB20635FDF00596054 /* main.m in Sources */,
+				2B20FCDD20635FDF00596054 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B20FCEC20635FE000596054 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B20FCF520635FE000596054 /* GYTimerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B20FCF720635FE000596054 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B20FD0020635FE000596054 /* GYTimerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2B20FCF220635FE000596054 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B20FCD720635FDF00596054 /* GYTimer */;
+			targetProxy = 2B20FCF120635FE000596054 /* PBXContainerItemProxy */;
+		};
+		2B20FCFD20635FE000596054 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B20FCD720635FDF00596054 /* GYTimer */;
+			targetProxy = 2B20FCFC20635FE000596054 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2B20FCE120635FDF00596054 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B20FCE220635FDF00596054 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2B20FCE620635FDF00596054 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B20FCE720635FDF00596054 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2B20FD0220635FE000596054 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2B20FD0320635FE000596054 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2B20FD0520635FE000596054 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GYTimer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lyons.GYTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2B20FD0620635FE000596054 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GYTimer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lyons.GYTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2B20FD0820635FE000596054 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GYTimerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lyons.GYTimerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GYTimer.app/GYTimer";
+			};
+			name = Debug;
+		};
+		2B20FD0920635FE000596054 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GYTimerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lyons.GYTimerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GYTimer.app/GYTimer";
+			};
+			name = Release;
+		};
+		2B20FD0B20635FE000596054 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GYTimerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lyons.GYTimerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GYTimer;
+			};
+			name = Debug;
+		};
+		2B20FD0C20635FE000596054 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GYTimerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lyons.GYTimerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GYTimer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B20FCD320635FDF00596054 /* Build configuration list for PBXProject "GYTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B20FD0220635FE000596054 /* Debug */,
+				2B20FD0320635FE000596054 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B20FD0420635FE000596054 /* Build configuration list for PBXNativeTarget "GYTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B20FD0520635FE000596054 /* Debug */,
+				2B20FD0620635FE000596054 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B20FD0720635FE000596054 /* Build configuration list for PBXNativeTarget "GYTimerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B20FD0820635FE000596054 /* Debug */,
+				2B20FD0920635FE000596054 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B20FD0A20635FE000596054 /* Build configuration list for PBXNativeTarget "GYTimerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B20FD0B20635FE000596054 /* Debug */,
+				2B20FD0C20635FE000596054 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2B20FCD020635FDF00596054 /* Project object */;
+}
