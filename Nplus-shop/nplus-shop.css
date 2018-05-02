@@ -1,0 +1,68 @@
+body {
+    background-color: #F7CC45;
+    height: 100%;
+}
+
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.backView {
+    background: url("image/cellImage.png");
+    position: relative;
+    background-size: cover;
+    top: 204px;
+    /*    background-color: #fff;*/
+    /*    border-radius: 30px;*/
+    width: calc(100% - 82px);
+    height: 800px;
+    margin-bottom: 64px;
+}
+
+.title {
+    color: #fff;
+    position: absolute;
+    font-size: 72px;
+    line-height: 70px;
+    top: 105px;
+    left: 44px;
+}
+
+.content {
+    color: #fff;
+    position: absolute;
+    font-size: 30px;
+    top: 250px;
+    left: 44px;
+}
+
+.price {
+    color: #fff;
+    position: absolute;
+    font-size: 18px;
+    bottom: 65px;
+    left: 44px;
+}
+
+.gameType {
+    color: #fff;
+    position: absolute;
+    font-size: 18px;
+    bottom: 36px;
+    left: 44px;
+}
+
+button.open {
+    background-color: white;
+    position: absolute;
+    color: #000;
+    font-size: 30px;
+    bottom: 36px;
+    right: 44px;
+    width: 184px;
+    height: 71px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 35.5px;
+}

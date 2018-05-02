@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="nplus-shop.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+    </script>
+</head>
+
+<body>
+    <!--cell-->
+
+    <!--
+    <div class="backView" id="backView0">
+        <div class="title" id="titleLabel">
+            标<br />题
+        </div>
+        <div class="content" id="contentLabel">
+            简介
+        </div>
+        <div class="price">
+            Free
+        </div>
+        <div class="gameType">
+            冒险游戏
+        </div>
+        <button class="open" style='font-size:30px' type="button" onclick="myFunction()">立即体验</button>
+    </div>
+-->
+
+
+    <!--js-->
+    <script>
+        function openClick() {
+            alert("立即体验");
+        }
+
+        /* 创建 number 个 backView */
+        function creatBackViews(number) {
+            for (var i = 0; i < number; i++) {  
+                var backView = creatBackView("backView", "backView" + i);
+                document.body.appendChild(backView);
+            }
+        }
+
+        /* 根据 className 创建 backView */
+        function creatBackView(className, index) {
+            var div = document.createElement("div");
+            div.className = className;
+            div.id = index;
+            div.style.width = window.innerWidth - 82 + "px";
+            div.style.height = (window.innerWidth - 82) / 668 * 824 + "px";
+
+            var title = document.createElement("div");
+            var content = document.createElement("div");
+            var price = document.createElement("div");
+            var gameType = document.createElement("div");
+            var open = document.createElement("button");
+
+            title.className = "title";
+            title.innerText = "标\n题";
+            content.className = "content";
+            content.innerText = "简介";
+            price.className = "price";
+            price.innerText = "free";
+            gameType.className = "gameType";
+            gameType.innerText = "冒险游戏";
+            open.className = "open";
+            open.innerText = "立即体验";
+            open.style.onclick = openClick;
+
+            div.appendChild(title);
+            div.appendChild(content);
+            div.appendChild(price);
+            div.appendChild(gameType);
+            div.appendChild(open);
+
+            return div;
+        }
+        
+        creatBackViews(4);
+    </script>
+
+
+</body>
+
+</html>
