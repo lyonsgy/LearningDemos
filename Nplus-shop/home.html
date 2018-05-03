@@ -5,14 +5,15 @@
     <title>Document</title>
     <link rel="stylesheet" href="nplus-shop.css">
     <style>
-        .iframe_a{
+        .iframe_a {
             background-color: 0;
             position: absolute;
             width: 100%;
-            height: 100%;
+            height: calc(100% - 98px);
             border: 0;
-            
+
         }
+
         ul {
             position: absolute;
             bottom: 0;
@@ -53,12 +54,17 @@
 </head>
 
 <body>
-    <iframe class="iframe_a" name="iframe_a"></iframe>
+    <iframe id="iframe_a" class="iframe_a" name="iframe_a"></iframe>
     <ul>
         <li><a href="nplus-game.html" target="iframe_a">GAME</a></li>
-        <li><a href="#news" target="iframe_a">WVI</a></li>
+        <li><a href="">WVI</a></li>
         <li><a href="nplus-game.html" target="iframe_a">IP</a></li>
-        <li><a href="#about" target="iframe_a">ABOUT</a></li>
+        <li><a href="">ABOUT</a></li>
     </ul>
 </body>
+
+<script>
+    var tabBar = document.getElementById("iframe_a");
+    tabBar.style.src = "nplus-game.html";
+</script>
 </html>
