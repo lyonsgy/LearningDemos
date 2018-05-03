@@ -9,7 +9,7 @@ body {
 }
 
 .backView {
-    background: url("image/cellImage.png");
+    background: url(image/cell0.png);
     position: relative;
     background-size: cover;
     top: 204px;
@@ -25,6 +25,7 @@ body {
     position: absolute;
     font-size: 72px;
     line-height: 70px;
+    width: 282px;
     top: 105px;
     left: 44px;
 }
@@ -35,6 +36,7 @@ body {
     font-size: 30px;
     top: 250px;
     left: 44px;
+    right: 44px;
 }
 
 .price {
