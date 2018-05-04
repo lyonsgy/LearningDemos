@@ -2,21 +2,21 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>ipHome</title>
     <link rel="stylesheet" href="nplus-shop.css">
     <style>
         .iframe_a {
-            background-color: 0;
             position: absolute;
             width: 100%;
-            height: calc(100% - 98px);
+            height: calc(100% - 333px);
+            top: 333px;
             border: 0;
 
         }
 
         ul {
             position: absolute;
-            bottom: 0;
+            top: 162px;
             list-style-type: none;
             margin: 0;
             padding: 0;
@@ -56,22 +56,12 @@
 <body>
     <iframe id="iframe_a" class="iframe_a" name="iframe_a"></iframe>
     <ul>
-        <li><a href="nplus-game.html" target="iframe_a" onclick="homeClick()">GAME</a></li>
-        <li><a href="">WVI</a></li>
-        <li><a href="nplus-ip.html" target="iframe_a" onclick="ipClick()">IP</a></li>
-        <li><a href="">ABOUT</a></li>
+        <li><a href="nplus-emoticons.html" target="iframe_a">微信表情包</a></li>
+        <li><a href="nplus-ip.html" target="iframe_a">IP形象设定</a></li>
     </ul>
 </body>
 
 <script>
-    function homeClick() {
-        document.body.style.backgroundColor = "#F7CC45";
-    }
-    
-    function ipClick() {
-        document.body.style.backgroundColor = "#5D539B";
-    }
-    var tabBar = document.getElementById("iframe_a");
-    tabBar.style.src = "nplus-game.html";
+    document.body.style.backgroundColor = "#5D539B";
 </script>
 </html>
