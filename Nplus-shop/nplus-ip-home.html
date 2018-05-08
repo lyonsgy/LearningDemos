@@ -1,40 +1,60 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>ipHome</title>
     <link rel="stylesheet" href="nplus-shop.css">
     <style>
-        .iframe_a {
+        .iframe_b {
             position: absolute;
             width: 100%;
             height: calc(100% - 333px);
             top: 333px;
             border: 0;
-
         }
 
-        ul {
-            position: absolute;
+        #trangle {
+            position: relative;
+            margin: 0 auto;
             top: 162px;
             list-style-type: none;
-            margin: 0;
             padding: 0;
-            overflow: hidden;
-            width: 100%;
+            /*            overflow: hidden;*/
+            width: calc(100% - 82px);
+            background-color: #fff;
+            border-radius: 30px;
+        }
+
+        #trangle:before {
+            content: "";
+            width: 0;
+            height: 0;
+            margin: 0 auto;
+            position: absolute;
+            top: 98px;
+            left: calc(25% - 20.5px);
+            border-style: solid;
+            border-width: 18px 30.5px 0 30.5px;
+            border-color: #fff transparent transparent transparent;
         }
 
         li {
             float: left;
-            width: 25%;
+            width: 50%;
             height: 98px;
             background-color: #fff;
-            opacity: .9;
+            overflow: hidden;
+            border-radius: 30px;
         }
 
         a:link,
         a:visited {
-            height: 98px;
+            top: 30px;
+            margin: 0 auto;
+            height: 43px;
+            padding: 27.5px;
+            align-content: space-between;
             display: block;
             font-weight: bold;
             color: #626262;
@@ -43,6 +63,7 @@
             text-decoration: none;
             text-transform: uppercase;
             font-size: 30px;
+            border-radius: 30px;
         }
 
         a:hover,
@@ -50,18 +71,40 @@
             background-color: #fff;
             color: #000;
         }
+
+        img {
+            position: relative;
+            right: 12px;
+            float: none;
+            margin: 0 auto;
+            vertical-align: text-top;
+        }
+
     </style>
 </head>
 
 <body>
-    <iframe id="iframe_a" class="iframe_a" name="iframe_a"></iframe>
-    <ul>
-        <li><a href="nplus-emoticons.html" target="iframe_a">微信表情包</a></li>
-        <li><a href="nplus-ip.html" target="iframe_a">IP形象设定</a></li>
-    </ul>
+    <iframe id="iframe_b" class="iframe_b" name="iframe_b"></iframe>
+    <div id="trangle">
+
+        <li><a id="wx" href="nplus-emoticons.html" target="iframe_b" onclick="tabClick()"><img src='image/icon_weixin_nor.png' />微信表情包</a></li>
+
+        <li><a id="ip" href="nplus-ip.html" target="iframe_b" onclick="tabClick()"><img src='image/icon_ip_nor.png' />IP形象设定</a></li>
+
+    </div>
 </body>
 
 <script>
     document.body.style.backgroundColor = "#5D539B";
+
+    document.getElementById("wx").click();
+
+    function tabClick() {
+        var trangle = document.getElementById("trangle");
+        trangle.before.style.left = "10px";
+        alert("lsafa");
+    }
+
 </script>
+
 </html>
