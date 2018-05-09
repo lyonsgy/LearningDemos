@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+<head>
+    <script type="text/javascript" src="（jQuery的文件路径）"></script>
+
+    <meta charset="utf-8">
+    <title>tab选项</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 100px;
+            background-color: #323232;
+            font-size: 12px;
+            font-family: "微软雅黑";
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+    </style>
+
+
+    <link rel="stylesheet" href="tab.css">
+
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="tab.js"></script>
+</head>
+
+<body>
+    <div class="tab">
+        <ul class="tab-nav">
+            <li class="actived"><a href="#">新闻</a></li>
+            <li><a href="#">娱乐</a></li>
+            <li><a href="#">电影</a></li>
+            <li><a href="#">科技</a></li>
+        </ul>
+        <div class="content-wrap">
+            <div class="content-item current">1</div>
+            <div class="content-item">2</div>
+            <div class="content-item">3</div>
+            <div class="content-item">4</div>
+        </div>
+    </div>
+    <script>
+        $(function() {
+            //TAB
+            var tab1 = new Tab({
+
+
+
+            });
+        })
+    </script>
+</body>
+
+</html>
