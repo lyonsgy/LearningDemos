@@ -1,21 +1,21 @@
-.tab {
+.js-tab {
     width: 300px;
 
 }
 
-.tab .tab-nav {
+.js-tab .tab-nav {
     height: 30px;
 
 }
 
-.tab .tab-nav li {
+.js-tab .tab-nav li {
     float: left;
     margin-right: 5px;
     background-color: #767676;
     border-radius: 3px 3px 0 0;
 }
 
-.tab .tab-nav li a {
+.js-tab .tab-nav li a {
     display: block;
     height: 30px;
     padding: 0 20px;
@@ -24,26 +24,27 @@
     text-decoration: none;
 }
 
-.tab .tab-nav li.actived {
+.js-tab .tab-nav li.actived {
     background-color: white;
 }
 
-.tab .tab-nav li.actived a {
+.js-tab .tab-nav li.actived a {
     color: #777;
 }
 
-.tab .content-wrap {
+.js-tab .content-wrap {
     background-color: white;
     padding: 5px;
     height: 200px;
 }
 
-.tab .content-wrap .content-item {
+.js-tab .content-wrap .content-item {
+    position: absolute;
     height: 200px;
     display: none;
 }
 
-.tab .content-wrap .current {
+.js-tab .content-wrap .current {
     display: block;
     
 }
