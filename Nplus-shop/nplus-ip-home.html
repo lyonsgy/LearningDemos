@@ -6,6 +6,20 @@
     <title>ipHome</title>
     <link rel="stylesheet" href="nplus-shop.css">
     <style>
+        .top{
+            width: 100%;
+            height: 333px;
+            background: #ccc;
+            margin: 0 auto;
+        }
+        .main{
+            position: absolute;
+            width: 100%;
+            height: calc(100% - 333px);
+            background: #fff;
+            margin: 0 auto;
+        }
+
         .iframe_b {
             position: absolute;
             width: 100%;
@@ -14,38 +28,33 @@
             border: 0;
         }
 
-        #trangle {
+        .back {
             position: relative;
             margin: 0 auto;
             top: 162px;
             list-style-type: none;
             padding: 0;
-            /*            overflow: hidden;*/
             width: calc(100% - 82px);
-            background-color: #fff;
             border-radius: 30px;
-        }
-
-        #trangle:before {
-            content: "";
-            width: 0;
-            height: 0;
-            margin: 0 auto;
-            position: absolute;
-            top: 98px;
-            left: calc(25% - 20.5px);
-            border-style: solid;
-            border-width: 18px 30.5px 0 30.5px;
-            border-color: #fff transparent transparent transparent;
+            background-color: #fff;
         }
 
         li {
             float: left;
-            width: 50%;
+            margin: 0 auto;
+            padding: 0 auto;
+            width: calc(50% - 1px);
             height: 98px;
-            background-color: #fff;
+            background-color: 0;
             overflow: hidden;
-            border-radius: 30px;
+        }
+
+        #wx {
+            border-radius: 30px 0 0 30px;
+        }
+
+        #ip {
+            border-radius: 0 30px 30px 0;
         }
 
         a:link,
@@ -53,7 +62,7 @@
             top: 30px;
             margin: 0 auto;
             height: 43px;
-            padding: 27.5px;
+            padding: 27.5px 0;
             align-content: space-between;
             display: block;
             font-weight: bold;
@@ -63,13 +72,35 @@
             text-decoration: none;
             text-transform: uppercase;
             font-size: 30px;
-            border-radius: 30px;
         }
 
         a:hover,
         a:active {
             background-color: #fff;
             color: #000;
+        }
+
+        a:after {
+            content: "";
+            border-top: 18px solid #fff;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            bottom: -116px;
+            left: calc(25% - 30px);
+            position: absolute;
+        }
+
+        .line {
+            height: 43px;
+            background-color: #CACACA;
+            width: 2px;
+            margin: 0 auto;
+            border-top: 27.5px;
+            border-bottom: 27.5px;
+            border-left: 0;
+            border-right: 0;
+            border-style: solid;
+            border-color: #fff;
         }
 
         img {
@@ -79,32 +110,42 @@
             margin: 0 auto;
             vertical-align: text-top;
         }
-
     </style>
 </head>
 
 <body>
-    <iframe id="iframe_b" class="iframe_b" name="iframe_b"></iframe>
-    <div id="trangle">
+    <!--<iframe id="iframe_b" class="iframe_b" name="iframe_b"></iframe>-->
+    <!--<ul class="back">-->
 
-        <li><a id="wx" href="nplus-emoticons.html" target="iframe_b" onclick="tabClick()"><img src='image/icon_weixin_nor.png' />微信表情包</a></li>
+        <!--<li>-->
+            <!--<a id="wx" href="nplus-emoticons.html" target="iframe_b" onclick='tabClick("wx")'><img src='image/icon_weixin_nor.png' />微信表情包</a>-->
+        <!--</li>-->
 
-        <li><a id="ip" href="nplus-ip.html" target="iframe_b" onclick="tabClick()"><img src='image/icon_ip_nor.png' />IP形象设定</a></li>
+        <!--<li class="line"></li>-->
 
-    </div>
+        <!--<li>-->
+            <!--<a id="ip" href="nplus-ip.html" target="iframe_b" onclick='tabClick("ip")'><img src='image/icon_ip_nor.png' />IP形象设定</a>-->
+        <!--</li>-->
+
+    <!--</ul>-->
+    <div class="top"></div>
+    <div id="ip" class="main"></div>
+    <div id="wx" class="main"></div>
 </body>
 
-<script>
-    document.body.style.backgroundColor = "#5D539B";
+<!--<script>-->
+    <!--document.body.style.backgroundColor = "#5D539B";-->
 
-    document.getElementById("wx").click();
+    <!--document.getElementById("wx").click();-->
 
-    function tabClick() {
-        var trangle = document.getElementById("trangle");
-        trangle.before.style.left = "10px";
-        alert("lsafa");
-    }
+    <!--function tabClick(classType) {-->
+        <!--if (type == "wx") {-->
+            <!--console.log("wx");-->
+        <!--} else {-->
+            <!--console.log("ip");-->
+        <!--}-->
 
-</script>
+    <!--}-->
+<!--</script>-->
 
 </html>
