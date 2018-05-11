@@ -4,118 +4,118 @@
 <head>
     <meta charset="UTF-8">
     <title>emoticons</title>
-    <link rel="stylesheet" href="nplus-shop.css">
+    <link rel="stylesheet" href="css/nplus-shop.css">
     <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->
 </head>
 
 <body>
-    <!--js-->
-    <script>
-        var data = [{
-                title: "NPLUSFAMILY",
-                content: "爱泡澡的歪嘴鸭",
-                price: 0,
-                gameType: "微信表情包",
-                image: "ip0.png"
-            },
-            {
-                title: "NPLUSFAMILY",
-                content: "小恩鸡的工作日常",
-                price: 0,
-                gameType: "微信表情包",
-                image: "ip1.png"
-            },
-            {
-                title: "NPLUSFAMILY",
-                content: "拜年/红包主题",
-                price: 0,
-                gameType: "微信表情包",
-                image: "ip2.png"
-            }
-        ];
-
-        function openClick() {
-            alert("立即体验");
+<!--js-->
+<script>
+    var data = [{
+        title: "NPLUSFAMILY",
+        content: "爱泡澡的歪嘴鸭",
+        price: 0,
+        gameType: "微信表情包",
+        image: "ip0.png"
+    },
+        {
+            title: "NPLUSFAMILY",
+            content: "小恩鸡的工作日常",
+            price: 0,
+            gameType: "微信表情包",
+            image: "ip1.png"
+        },
+        {
+            title: "NPLUSFAMILY",
+            content: "拜年/红包主题",
+            price: 0,
+            gameType: "微信表情包",
+            image: "ip2.png"
         }
-        
-        /* 根据 className 创建 backView */
-        function creatBackView(index) {
-            var backDiv = document.createElement("div");
-            backDiv.className = "backView";
-            backDiv.id = "backView" + index;
-            var divWidth = window.innerWidth - 82;
-            var aspectRatio = 668 / 824; //宽高比
-            backDiv.style.width = divWidth + "px";
-            backDiv.style.height = divWidth / aspectRatio + "px";
-            backDiv.style.top = "0px";
-            
-            var titleDiv = document.createElement("div");
-            var contentDiv = document.createElement("div");
-            var priceDiv = document.createElement("div");
-            var gameTypeDiv = document.createElement("div");
-            var openBtn = document.createElement("button");
+    ];
 
-            titleDiv.className = "title";
-            titleDiv.id = "title" + index;
-            titleDiv.style.color = "#1B1B1B";
-            
-            contentDiv.className = "content";
-            contentDiv.id = "content" + index;
-            contentDiv.style.color = "#1B1B1B";
+    function openClick() {
+        alert("立即体验");
+    }
 
-            priceDiv.className = "price";
-            priceDiv.id = "price" + index;
-            priceDiv.style.color = "#1B1B1B";
+    /* 根据 className 创建 backView */
+    function creatBackView(index) {
+        var backDiv = document.createElement("div");
+        backDiv.className = "backView";
+        backDiv.id = "backView" + index;
+        var divWidth = window.innerWidth - 82;
+        var aspectRatio = 668 / 824; //宽高比
+        backDiv.style.width = divWidth + "px";
+        backDiv.style.height = divWidth / aspectRatio + "px";
+        backDiv.style.top = "0px";
 
-            gameTypeDiv.className = "gameType";
-            gameTypeDiv.id = "gameType" + index;
-            gameTypeDiv.style.color = "#1B1B1B";
+        var titleDiv = document.createElement("div");
+        var contentDiv = document.createElement("div");
+        var priceDiv = document.createElement("div");
+        var gameTypeDiv = document.createElement("div");
+        var openBtn = document.createElement("button");
 
-            openBtn.className = "open";
-            openBtn.innerText = "立即体验";
-            openBtn.style.backgroundColor = "#5D539B";
-            openBtn.style.color = "#fff"
-            //open.style.onclick = openClick;
-            
-            backDiv.appendChild(titleDiv);
-            backDiv.appendChild(contentDiv);
-            backDiv.appendChild(priceDiv);
-            backDiv.appendChild(gameTypeDiv);
-            backDiv.appendChild(openBtn);
+        titleDiv.className = "title";
+        titleDiv.id = "title" + index;
+        titleDiv.style.color = "#1B1B1B";
 
-            var game = data[index];
-            
-            titleDiv.innerText = game.title;
-            contentDiv.innerText = game.content;
-            priceDiv.innerText = priceString(game.price);
-            gameTypeDiv.innerText = game.gameType;
-            backDiv.style.background = "url(image/" + game.image +")";
-            backDiv.style.backgroundSize = "cover";
-            
-            return backDiv;
+        contentDiv.className = "content";
+        contentDiv.id = "content" + index;
+        contentDiv.style.color = "#1B1B1B";
+
+        priceDiv.className = "price";
+        priceDiv.id = "price" + index;
+        priceDiv.style.color = "#1B1B1B";
+
+        gameTypeDiv.className = "gameType";
+        gameTypeDiv.id = "gameType" + index;
+        gameTypeDiv.style.color = "#1B1B1B";
+
+        openBtn.className = "open";
+        openBtn.innerText = "立即体验";
+        openBtn.style.backgroundColor = "#5D539B";
+        openBtn.style.color = "#fff"
+        //open.style.onclick = openClick;
+
+        backDiv.appendChild(titleDiv);
+        backDiv.appendChild(contentDiv);
+        backDiv.appendChild(priceDiv);
+        backDiv.appendChild(gameTypeDiv);
+        backDiv.appendChild(openBtn);
+
+        var game = data[index];
+
+        titleDiv.innerText = game.title;
+        contentDiv.innerText = game.content;
+        priceDiv.innerText = priceString(game.price);
+        gameTypeDiv.innerText = game.gameType;
+        backDiv.style.background = "url(image/" + game.image + ")";
+        backDiv.style.backgroundSize = "cover";
+
+        return backDiv;
+    }
+
+    function priceString(price) {
+        if (price == 0) {
+            return "FREE";
+        } else {
+            return "￥" + price;
         }
-        
-        function priceString(price) {
-            if (price == 0) {
-                return "FREE";
-            } else {
-                return "￥" + price;
-            }
-        }
+    }
 
-        /* 创建 number 个 backView */
-        function creatBackViews(number) {
-            for (var i = 0; i < number; i++) {  
-                var backDiv = creatBackView(i);
-                document.body.appendChild(backDiv);
-            }
+    /* 创建 number 个 backView */
+    function creatBackViews(number) {
+        for (var i = 0; i < number; i++) {
+            var backDiv = creatBackView(i);
+            document.body.appendChild(backDiv);
         }
-        
-        document.body.style.top = "64px";
-        document.body.style.backgroundColor = "#5D539B";
-        creatBackViews(data.length);
-    </script>
-    <!--    <script type="text/javascript" src="js/nplus-game.js"></script>-->
+    }
+
+    document.body.style.top = "64px";
+    document.body.style.backgroundColor = "#5D539B";
+    creatBackViews(data.length);
+</script>
+<!--    <script type="text/javascript" src="js/nplus-game.js"></script>-->
 
 </body>
 

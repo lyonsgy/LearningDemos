@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>ipHome</title>
-    <link rel="stylesheet" href="nplus-shop.css">
+    <link rel="stylesheet" href="css/nplus-shop.css">
     <style>
         .top{
             width: 100%;
@@ -80,15 +80,15 @@
             color: #000;
         }
 
-        a:after {
-            content: "";
-            border-top: 18px solid #fff;
-            border-left: 30px solid transparent;
-            border-right: 30px solid transparent;
-            bottom: -116px;
-            left: calc(25% - 30px);
-            position: absolute;
-        }
+        /*a:after {*/
+            /*content: "";*/
+            /*border-top: 18px solid #fff;*/
+            /*border-left: 30px solid transparent;*/
+            /*border-right: 30px solid transparent;*/
+            /*bottom: -116px;*/
+            /*left: calc(25% - 30px);*/
+            /*position: absolute;*/
+        /*}*/
 
         .line {
             height: 43px;
@@ -114,38 +114,35 @@
 </head>
 
 <body>
-    <!--<iframe id="iframe_b" class="iframe_b" name="iframe_b"></iframe>-->
-    <!--<ul class="back">-->
+    <iframe id="iframe_b" class="iframe_b" name="iframe_b"></iframe>
+    <ul class="back">
 
-        <!--<li>-->
-            <!--<a id="wx" href="nplus-emoticons.html" target="iframe_b" onclick='tabClick("wx")'><img src='image/icon_weixin_nor.png' />微信表情包</a>-->
-        <!--</li>-->
+        <li>
+            <a id="wx" href="nplus-emoticons.html" target="iframe_b" onclick='tabClick("wx")'><img src='image/icon_weixin_nor.png' />微信表情包</a>
+        </li>
 
-        <!--<li class="line"></li>-->
+        <li class="line"></li>
 
-        <!--<li>-->
-            <!--<a id="ip" href="nplus-ip.html" target="iframe_b" onclick='tabClick("ip")'><img src='image/icon_ip_nor.png' />IP形象设定</a>-->
-        <!--</li>-->
+        <li>
+            <a id="ip" href="nplus-ip.html" target="iframe_b" onclick='tabClick("ip")'><img src='image/icon_ip_nor.png' />IP形象设定</a>
+        </li>
 
-    <!--</ul>-->
-    <div class="top"></div>
-    <div id="ip" class="main"></div>
-    <div id="wx" class="main"></div>
+    </ul>
 </body>
 
-<!--<script>-->
-    <!--document.body.style.backgroundColor = "#5D539B";-->
+<script>
+    document.body.style.backgroundColor = "#5D539B";
 
-    <!--document.getElementById("wx").click();-->
+    document.getElementById("wx").click();
 
-    <!--function tabClick(classType) {-->
-        <!--if (type == "wx") {-->
-            <!--console.log("wx");-->
-        <!--} else {-->
-            <!--console.log("ip");-->
-        <!--}-->
+    function tabClick(classType) {
+        if (type == "wx") {
+            console.log("wx");
+        } else {
+            console.log("ip");
+        }
 
-    <!--}-->
-<!--</script>-->
+    }
+</script>
 
 </html>

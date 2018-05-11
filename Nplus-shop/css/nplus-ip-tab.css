@@ -1,0 +1,145 @@
+.tab-back {
+    width: 300px;
+
+}
+
+.tab-back .tab-nav {
+    height: 333px;
+    position: relative;
+    margin: 0 auto;
+    top: 162px;
+    list-style-type: none;
+    padding: 0;
+    width: calc(100% - 82px);
+    border-radius: 30px;
+    background-color: #ccc;
+}
+
+.top {
+    width: 100%;
+    height: 333px;
+    background: #ccc;
+    margin: 0 auto;
+}
+
+.main {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 333px);
+    background: #fff;
+    margin: 0 auto;
+}
+
+.tab-back .tab-nav li {
+    /*border-radius: 3px 3px 0 0;*/
+
+    float: left;
+    margin: 0 auto;
+    padding: 0 auto;
+    width: calc(50% - 1px);
+    height: 98px;
+    background-color: #767676;
+    overflow: hidden;
+}
+
+.tab-back .tab-nav li a {
+    display: block;
+    height: 30px;
+    padding: 0 20px;
+    color: white;
+    line-height: 30px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.tab-back .tab-nav li.actived {
+    background-color: white;
+}
+
+.tab-back .tab-nav li.actived a {
+    color: #777;
+}
+
+.tab-back .content-wrap {
+    /*background-color: white;*/
+    /*padding: 5px;*/
+    /*height: 200px;*/
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 333px);
+    background: #fff;
+    margin: 0 auto;
+}
+
+.tab-back .content-wrap .content-item {
+    position: absolute;
+    height: 200px;
+    display: none;
+}
+
+.tab-back .content-wrap .current {
+    display: block;
+
+}
+
+#wx {
+    border-radius: 30px 0 0 30px;
+}
+
+#ip {
+    border-radius: 0 30px 30px 0;
+}
+
+a:link,
+a:visited {
+    top: 30px;
+    margin: 0 auto;
+    height: 43px;
+    padding: 27.5px 0;
+    align-content: space-between;
+    display: block;
+    font-weight: bold;
+    color: #626262;
+    background-color: #fff;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+a:hover,
+a:active {
+    background-color: #fff;
+    color: #000;
+}
+
+a:after {
+    content: "";
+    border-top: 18px solid #fff;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    bottom: -116px;
+    left: calc(25% - 30px);
+    position: absolute;
+}
+
+.line {
+    height: 43px;
+    background-color: #CACACA;
+    width: 2px;
+    margin: 0 auto;
+    border-top: 27.5px;
+    border-bottom: 27.5px;
+    border-left: 0;
+    border-right: 0;
+    border-style: solid;
+    border-color: #fff;
+}
+
+img {
+    position: relative;
+    right: 12px;
+    float: none;
+    margin: 0 auto;
+    vertical-align: text-top;
+}
