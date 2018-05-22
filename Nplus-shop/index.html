@@ -30,8 +30,8 @@
             background-color: #fff;
             opacity: .9;
         }
-        
-        .line{
+
+        .line {
             width: 1px;
             background-color: #000;
             height: 43px;
@@ -44,7 +44,7 @@
             border-style: solid;
             border-color: #fff;
         }
-        
+
         a:link,
         a:visited {
             display: block;
@@ -63,37 +63,36 @@
             background-color: #fff;
             color: #000;
         }
-        
+
     </style>
 </head>
 
 <body>
-    <iframe id="iframe_a" class="iframe_a" name="iframe_a"></iframe>
-    <ul>
-        
-        <li><a id="game" href="nplus-game.html" target="iframe_a" onclick="homeClick()">GAME</a></li>
-        <li class="line"></li>
-        <li><a href="">WVI</a></li>
-        <li class="line"></li>
-        <li><a id="ip" href="nplus-ip-home.html" target="iframe_a" onclick="ipClick()">IP</a></li>
-        <li class="line"></li>
-        <li><a href="">ABOUT</a></li>
-        
-    </ul>
+<iframe id="iframe_a" class="iframe_a" name="iframe_a"></iframe>
+<ul>
+    <li><a id="game" href="nplus-game.html" target="iframe_a" onclick="homeClick()">GAME</a></li>
+    <li class="line"></li>
+    <li><a href="">WVI</a></li>
+    <li class="line"></li>
+    <li><a id="ip" href="nplus-ip-home.html" target="iframe_a" onclick="ipClick()">IP</a></li>
+    <li class="line"></li>
+    <li><a href="">ABOUT</a></li>
+
+</ul>
 </body>
 
 <script>
     function homeClick() {
         document.body.style.backgroundColor = "#F7CC45";
     }
-    
+
     function ipClick() {
         document.body.style.backgroundColor = "#5D539B";
     }
-    
+
     var tabBar = document.getElementById("iframe_a");
     tabBar.style.src = "nplus-game.html";
-    
+
     document.getElementById("game").click();
 </script>
 </html>

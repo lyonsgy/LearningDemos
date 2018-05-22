@@ -9,130 +9,130 @@
 </head>
 
 <body>
-    <!--cell-->
-    <!--
-    <div class="backView" id="backView0">
-        <div class="title" id="titleLabel">
-            标<br />题
-        </div>
-        <div class="content" id="contentLabel">
-            简介
-        </div>
-        <div class="price">
-            Free
-        </div>
-        <div class="gameType">
-            冒险游戏
-        </div>
-        <button class="open" style='font-size:30px' type="button" onclick="myFunction()">立即体验</button>
+<!--cell-->
+<!--
+<div class="backView" id="backView0">
+    <div class="title" id="titleLabel">
+        标<br />题
     </div>
+    <div class="content" id="contentLabel">
+        简介
+    </div>
+    <div class="price">
+        Free
+    </div>
+    <div class="gameType">
+        冒险游戏
+    </div>
+    <button class="open" style='font-size:30px' type="button" onclick="myFunction()">立即体验</button>
+</div>
 -->
 
-    <!--js-->
-    <script>
-        var data = [{
-                title: "nightmare escape",
-                content: "逃离梦魇",
-                price: 0,
-                gameType: "冒险游戏",
-                image: "game0.png"
-            },
-            {
-                title: "Dead Area",
-                content: "亡命战场",
-                price: 0,
-                gameType: "冒险游戏",
-                image: "game1.png"
-            },
-            {
-                title: "overtime",
-                content: "消灭加班狗",
-                price: 0,
-                gameType: "射击游戏",
-                image: "game2.png"
-            },
-            {
-                title: "battleground sniper",
-                content: "绝地狙击",
-                price: 0,
-                gameType: "射击游戏",
-                image: "game3.png"
-            }
-        ];
-
-        function openClick() {
-            alert("立即体验");
+<!--js-->
+<script>
+    var data = [{
+        title: "nightmare escape",
+        content: "逃离梦魇",
+        price: 0,
+        gameType: "冒险游戏",
+        image: "game0.png"
+    },
+        {
+            title: "Dead Area",
+            content: "亡命战场",
+            price: 0,
+            gameType: "冒险游戏",
+            image: "game1.png"
+        },
+        {
+            title: "overtime",
+            content: "消灭加班狗",
+            price: 0,
+            gameType: "射击游戏",
+            image: "game2.png"
+        },
+        {
+            title: "battleground sniper",
+            content: "绝地狙击",
+            price: 0,
+            gameType: "射击游戏",
+            image: "game3.png"
         }
+    ];
 
-        /* 根据 className 创建 backView */
-        function creatBackView(index) {
-            var backDiv = document.createElement("div");
-            backDiv.className = "backView";
-            backDiv.id = "backView" + index;
-            var divWidth = window.innerWidth - 82;
-            var aspectRatio = 668 / 824; //宽高比
-            backDiv.style.width = divWidth + "px";
-            backDiv.style.height = divWidth / aspectRatio + "px";
-            
-            var titleDiv = document.createElement("div");
-            var contentDiv = document.createElement("div");
-            var priceDiv = document.createElement("div");
-            var gameTypeDiv = document.createElement("div");
-            var openBtn = document.createElement("button");
+    function openClick() {
+        alert("立即体验");
+    }
 
-            titleDiv.className = "title";
-            titleDiv.id = "title" + index;
-            
-            contentDiv.className = "content";
-            contentDiv.id = "content" + index;
+    /* 根据 className 创建 backView */
+    function creatBackView(index) {
+        var backDiv = document.createElement("div");
+        backDiv.className = "backView";
+        backDiv.id = "backView" + index;
+        var divWidth = window.innerWidth - 82;
+        var aspectRatio = 668 / 824; //宽高比
+        backDiv.style.width = divWidth + "px";
+        backDiv.style.height = divWidth / aspectRatio + "px";
 
-            priceDiv.className = "price";
-            priceDiv.id = "price" + index;
+        var titleDiv = document.createElement("div");
+        var contentDiv = document.createElement("div");
+        var priceDiv = document.createElement("div");
+        var gameTypeDiv = document.createElement("div");
+        var openBtn = document.createElement("button");
 
-            gameTypeDiv.className = "gameType";
-            gameTypeDiv.id = "gameType" + index;
+        titleDiv.className = "title";
+        titleDiv.id = "title" + index;
 
-            openBtn.className = "open";
-            openBtn.innerText = "立即体验";
-            //open.style.onclick = openClick;
-            
-            backDiv.appendChild(titleDiv);
-            backDiv.appendChild(contentDiv);
-            backDiv.appendChild(priceDiv);
-            backDiv.appendChild(gameTypeDiv);
-            backDiv.appendChild(openBtn);
+        contentDiv.className = "content";
+        contentDiv.id = "content" + index;
 
-            var game = data[index];
-            
-            titleDiv.innerText = game.title;
-            contentDiv.innerText = game.content;
-            priceDiv.innerText = priceString(game.price);
-            gameTypeDiv.innerText = game.gameType;
-            backDiv.style.background = "url(image/" + game.image +")";
-            backDiv.style.backgroundSize = "cover";
-            
-            return backDiv;
+        priceDiv.className = "price";
+        priceDiv.id = "price" + index;
+
+        gameTypeDiv.className = "gameType";
+        gameTypeDiv.id = "gameType" + index;
+
+        openBtn.className = "open";
+        openBtn.innerText = "立即体验";
+        //open.style.onclick = openClick;
+
+        backDiv.appendChild(titleDiv);
+        backDiv.appendChild(contentDiv);
+        backDiv.appendChild(priceDiv);
+        backDiv.appendChild(gameTypeDiv);
+        backDiv.appendChild(openBtn);
+
+        var game = data[index];
+
+        titleDiv.innerText = game.title;
+        contentDiv.innerText = game.content;
+        priceDiv.innerText = priceString(game.price);
+        gameTypeDiv.innerText = game.gameType;
+        backDiv.style.background = "url(image/" + game.image + ")";
+        backDiv.style.backgroundSize = "cover";
+
+        return backDiv;
+    }
+
+    function priceString(price) {
+        if (price == 0) {
+            return "FREE";
+        } else {
+            return "￥" + price;
         }
-        
-        function priceString(price) {
-            if (price == 0) {
-                return "FREE";
-            } else {
-                return "￥" + price;
-            }
-        }
+    }
 
-        /* 创建 number 个 backView */
-        function creatBackViews(number) {
-            for (var i = 0; i < number; i++) {  
-                var backDiv = creatBackView(i);
-                document.body.appendChild(backDiv);
-            }
+    /* 创建 number 个 backView */
+    function creatBackViews(number) {
+        for (var i = 0; i < number; i++) {
+            var backDiv = creatBackView(i);
+            document.body.appendChild(backDiv);
         }
-        
-        creatBackViews(data.length);
-    </script>
-    <!--    <script type="text/javascript" src="js/nplus-game.js"></script>-->
+    }
+
+    creatBackViews(data.length);
+</script>
+<!--    <script type="text/javascript" src="js/nplus-game.js"></script>-->
 
 </body>
 

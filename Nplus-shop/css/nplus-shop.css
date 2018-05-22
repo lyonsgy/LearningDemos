@@ -9,7 +9,7 @@ body {
 }
 
 .backView {
-    background: url(image/cell0.png);
+    /*background: url(image/cell0.png);*/
     position: relative;
     background-size: cover;
     top: 204px;

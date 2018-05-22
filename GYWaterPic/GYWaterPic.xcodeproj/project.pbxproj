@@ -1,0 +1,710 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2BC0587620B3C5BB005D716F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC0587520B3C5BB005D716F /* AppDelegate.m */; };
+		2BC0587920B3C5BB005D716F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC0587820B3C5BB005D716F /* ViewController.m */; };
+		2BC0587C20B3C5BB005D716F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BC0587A20B3C5BB005D716F /* Main.storyboard */; };
+		2BC0587E20B3C5BB005D716F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BC0587D20B3C5BB005D716F /* Assets.xcassets */; };
+		2BC0588120B3C5BB005D716F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BC0587F20B3C5BB005D716F /* LaunchScreen.storyboard */; };
+		2BC0588420B3C5BB005D716F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC0588320B3C5BB005D716F /* main.m */; };
+		2BC0588E20B3C5BB005D716F /* GYWaterPicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC0588D20B3C5BB005D716F /* GYWaterPicTests.m */; };
+		2BC0589920B3C5BB005D716F /* GYWaterPicUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC0589820B3C5BB005D716F /* GYWaterPicUITests.m */; };
+		2BC058A820B3C8D3005D716F /* GYWaterPicHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC058A720B3C8D3005D716F /* GYWaterPicHelper.m */; };
+		893EC67E8FB0B385441FAE09 /* libPods-GYWaterPicTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D06BF6AEBBF3F7AFD05C6C7F /* libPods-GYWaterPicTests.a */; };
+		F81615F14FE07ACE53A29D44 /* libPods-GYWaterPic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC8E1B6A2401695FC302D74 /* libPods-GYWaterPic.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2BC0588A20B3C5BB005D716F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BC0586920B3C5BA005D716F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BC0587020B3C5BA005D716F;
+			remoteInfo = GYWaterPic;
+		};
+		2BC0589520B3C5BB005D716F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BC0586920B3C5BA005D716F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BC0587020B3C5BA005D716F;
+			remoteInfo = GYWaterPic;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1B239B2824D15D7E7E9F46D2 /* Pods-GYWaterPicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GYWaterPicTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GYWaterPicTests/Pods-GYWaterPicTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2BC0587120B3C5BB005D716F /* GYWaterPic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GYWaterPic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BC0587420B3C5BB005D716F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2BC0587520B3C5BB005D716F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2BC0587720B3C5BB005D716F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2BC0587820B3C5BB005D716F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2BC0587B20B3C5BB005D716F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2BC0587D20B3C5BB005D716F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2BC0588020B3C5BB005D716F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2BC0588220B3C5BB005D716F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BC0588320B3C5BB005D716F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2BC0588920B3C5BB005D716F /* GYWaterPicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GYWaterPicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BC0588D20B3C5BB005D716F /* GYWaterPicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYWaterPicTests.m; sourceTree = "<group>"; };
+		2BC0588F20B3C5BB005D716F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BC0589420B3C5BB005D716F /* GYWaterPicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GYWaterPicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BC0589820B3C5BB005D716F /* GYWaterPicUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYWaterPicUITests.m; sourceTree = "<group>"; };
+		2BC0589A20B3C5BB005D716F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BC058A620B3C8D3005D716F /* GYWaterPicHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GYWaterPicHelper.h; sourceTree = "<group>"; };
+		2BC058A720B3C8D3005D716F /* GYWaterPicHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GYWaterPicHelper.m; sourceTree = "<group>"; };
+		93DF9BE49895CE07D82238B8 /* Pods-GYWaterPic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GYWaterPic.release.xcconfig"; path = "Pods/Target Support Files/Pods-GYWaterPic/Pods-GYWaterPic.release.xcconfig"; sourceTree = "<group>"; };
+		9AC8E1B6A2401695FC302D74 /* libPods-GYWaterPic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GYWaterPic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB4DC54E57E24258C1FF0AD4 /* Pods-GYWaterPic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GYWaterPic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GYWaterPic/Pods-GYWaterPic.debug.xcconfig"; sourceTree = "<group>"; };
+		D06BF6AEBBF3F7AFD05C6C7F /* libPods-GYWaterPicTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GYWaterPicTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3A2AB76C9ED8134E4DEBB7F /* Pods-GYWaterPicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GYWaterPicTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GYWaterPicTests/Pods-GYWaterPicTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2BC0586E20B3C5BA005D716F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F81615F14FE07ACE53A29D44 /* libPods-GYWaterPic.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BC0588620B3C5BB005D716F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				893EC67E8FB0B385441FAE09 /* libPods-GYWaterPicTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BC0589120B3C5BB005D716F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0FAECC54FD8B2BC47050CDB0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CB4DC54E57E24258C1FF0AD4 /* Pods-GYWaterPic.debug.xcconfig */,
+				93DF9BE49895CE07D82238B8 /* Pods-GYWaterPic.release.xcconfig */,
+				1B239B2824D15D7E7E9F46D2 /* Pods-GYWaterPicTests.debug.xcconfig */,
+				F3A2AB76C9ED8134E4DEBB7F /* Pods-GYWaterPicTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2BC0586820B3C5BA005D716F = {
+			isa = PBXGroup;
+			children = (
+				2BC0587320B3C5BB005D716F /* GYWaterPic */,
+				2BC0588C20B3C5BB005D716F /* GYWaterPicTests */,
+				2BC0589720B3C5BB005D716F /* GYWaterPicUITests */,
+				2BC0587220B3C5BB005D716F /* Products */,
+				0FAECC54FD8B2BC47050CDB0 /* Pods */,
+				3703A6C8846D928ED8B7143B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2BC0587220B3C5BB005D716F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BC0587120B3C5BB005D716F /* GYWaterPic.app */,
+				2BC0588920B3C5BB005D716F /* GYWaterPicTests.xctest */,
+				2BC0589420B3C5BB005D716F /* GYWaterPicUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2BC0587320B3C5BB005D716F /* GYWaterPic */ = {
+			isa = PBXGroup;
+			children = (
+				2BC0587420B3C5BB005D716F /* AppDelegate.h */,
+				2BC0587520B3C5BB005D716F /* AppDelegate.m */,
+				2BC0587720B3C5BB005D716F /* ViewController.h */,
+				2BC0587820B3C5BB005D716F /* ViewController.m */,
+				2BC058A620B3C8D3005D716F /* GYWaterPicHelper.h */,
+				2BC058A720B3C8D3005D716F /* GYWaterPicHelper.m */,
+				2BC0587A20B3C5BB005D716F /* Main.storyboard */,
+				2BC0587D20B3C5BB005D716F /* Assets.xcassets */,
+				2BC0587F20B3C5BB005D716F /* LaunchScreen.storyboard */,
+				2BC0588220B3C5BB005D716F /* Info.plist */,
+				2BC0588320B3C5BB005D716F /* main.m */,
+			);
+			path = GYWaterPic;
+			sourceTree = "<group>";
+		};
+		2BC0588C20B3C5BB005D716F /* GYWaterPicTests */ = {
+			isa = PBXGroup;
+			children = (
+				2BC0588D20B3C5BB005D716F /* GYWaterPicTests.m */,
+				2BC0588F20B3C5BB005D716F /* Info.plist */,
+			);
+			path = GYWaterPicTests;
+			sourceTree = "<group>";
+		};
+		2BC0589720B3C5BB005D716F /* GYWaterPicUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2BC0589820B3C5BB005D716F /* GYWaterPicUITests.m */,
+				2BC0589A20B3C5BB005D716F /* Info.plist */,
+			);
+			path = GYWaterPicUITests;
+			sourceTree = "<group>";
+		};
+		3703A6C8846D928ED8B7143B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9AC8E1B6A2401695FC302D74 /* libPods-GYWaterPic.a */,
+				D06BF6AEBBF3F7AFD05C6C7F /* libPods-GYWaterPicTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2BC0587020B3C5BA005D716F /* GYWaterPic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BC0589D20B3C5BB005D716F /* Build configuration list for PBXNativeTarget "GYWaterPic" */;
+			buildPhases = (
+				ACD739C72E9FF603768F32A8 /* [CP] Check Pods Manifest.lock */,
+				2BC0586D20B3C5BA005D716F /* Sources */,
+				2BC0586E20B3C5BA005D716F /* Frameworks */,
+				2BC0586F20B3C5BA005D716F /* Resources */,
+				3D671B5D0F3A3C2189E66C3A /* [CP] Embed Pods Frameworks */,
+				D9FBF2978D862A338485A65E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GYWaterPic;
+			productName = GYWaterPic;
+			productReference = 2BC0587120B3C5BB005D716F /* GYWaterPic.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2BC0588820B3C5BB005D716F /* GYWaterPicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BC058A020B3C5BB005D716F /* Build configuration list for PBXNativeTarget "GYWaterPicTests" */;
+			buildPhases = (
+				AB97B2CFCEAD844E4421CAD4 /* [CP] Check Pods Manifest.lock */,
+				2BC0588520B3C5BB005D716F /* Sources */,
+				2BC0588620B3C5BB005D716F /* Frameworks */,
+				2BC0588720B3C5BB005D716F /* Resources */,
+				58F58AD6FE2F559EF4764791 /* [CP] Embed Pods Frameworks */,
+				4996CC717CC9D5AFF71B32CB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BC0588B20B3C5BB005D716F /* PBXTargetDependency */,
+			);
+			name = GYWaterPicTests;
+			productName = GYWaterPicTests;
+			productReference = 2BC0588920B3C5BB005D716F /* GYWaterPicTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2BC0589320B3C5BB005D716F /* GYWaterPicUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BC058A320B3C5BB005D716F /* Build configuration list for PBXNativeTarget "GYWaterPicUITests" */;
+			buildPhases = (
+				2BC0589020B3C5BB005D716F /* Sources */,
+				2BC0589120B3C5BB005D716F /* Frameworks */,
+				2BC0589220B3C5BB005D716F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BC0589620B3C5BB005D716F /* PBXTargetDependency */,
+			);
+			name = GYWaterPicUITests;
+			productName = GYWaterPicUITests;
+			productReference = 2BC0589420B3C5BB005D716F /* GYWaterPicUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2BC0586920B3C5BA005D716F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = lyons;
+				TargetAttributes = {
+					2BC0587020B3C5BA005D716F = {
+						CreatedOnToolsVersion = 9.3.1;
+						ProvisioningStyle = Automatic;
+					};
+					2BC0588820B3C5BB005D716F = {
+						CreatedOnToolsVersion = 9.3.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2BC0587020B3C5BA005D716F;
+					};
+					2BC0589320B3C5BB005D716F = {
+						CreatedOnToolsVersion = 9.3.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2BC0587020B3C5BA005D716F;
+					};
+				};
+			};
+			buildConfigurationList = 2BC0586C20B3C5BA005D716F /* Build configuration list for PBXProject "GYWaterPic" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2BC0586820B3C5BA005D716F;
+			productRefGroup = 2BC0587220B3C5BB005D716F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2BC0587020B3C5BA005D716F /* GYWaterPic */,
+				2BC0588820B3C5BB005D716F /* GYWaterPicTests */,
+				2BC0589320B3C5BB005D716F /* GYWaterPicUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BC0586F20B3C5BA005D716F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BC0588120B3C5BB005D716F /* LaunchScreen.storyboard in Resources */,
+				2BC0587E20B3C5BB005D716F /* Assets.xcassets in Resources */,
+				2BC0587C20B3C5BB005D716F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BC0588720B3C5BB005D716F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BC0589220B3C5BB005D716F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3D671B5D0F3A3C2189E66C3A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GYWaterPic/Pods-GYWaterPic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4996CC717CC9D5AFF71B32CB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GYWaterPicTests/Pods-GYWaterPicTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58F58AD6FE2F559EF4764791 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GYWaterPicTests/Pods-GYWaterPicTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB97B2CFCEAD844E4421CAD4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GYWaterPicTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACD739C72E9FF603768F32A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GYWaterPic-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9FBF2978D862A338485A65E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GYWaterPic/Pods-GYWaterPic-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BC0586D20B3C5BA005D716F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BC058A820B3C8D3005D716F /* GYWaterPicHelper.m in Sources */,
+				2BC0587920B3C5BB005D716F /* ViewController.m in Sources */,
+				2BC0588420B3C5BB005D716F /* main.m in Sources */,
+				2BC0587620B3C5BB005D716F /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BC0588520B3C5BB005D716F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BC0588E20B3C5BB005D716F /* GYWaterPicTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BC0589020B3C5BB005D716F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BC0589920B3C5BB005D716F /* GYWaterPicUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2BC0588B20B3C5BB005D716F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BC0587020B3C5BA005D716F /* GYWaterPic */;
+			targetProxy = 2BC0588A20B3C5BB005D716F /* PBXContainerItemProxy */;
+		};
+		2BC0589620B3C5BB005D716F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BC0587020B3C5BA005D716F /* GYWaterPic */;
+			targetProxy = 2BC0589520B3C5BB005D716F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2BC0587A20B3C5BB005D716F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BC0587B20B3C5BB005D716F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2BC0587F20B3C5BB005D716F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BC0588020B3C5BB005D716F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2BC0589B20B3C5BB005D716F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2BC0589C20B3C5BB005D716F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2BC0589E20B3C5BB005D716F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB4DC54E57E24258C1FF0AD4 /* Pods-GYWaterPic.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 79MZ7A623K;
+				INFOPLIST_FILE = GYWaterPic/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lyons.GYWaterPic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2BC0589F20B3C5BB005D716F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93DF9BE49895CE07D82238B8 /* Pods-GYWaterPic.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 79MZ7A623K;
+				INFOPLIST_FILE = GYWaterPic/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lyons.GYWaterPic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2BC058A120B3C5BB005D716F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B239B2824D15D7E7E9F46D2 /* Pods-GYWaterPicTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 79MZ7A623K;
+				INFOPLIST_FILE = GYWaterPicTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lyons.GYWaterPicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GYWaterPic.app/GYWaterPic";
+			};
+			name = Debug;
+		};
+		2BC058A220B3C5BB005D716F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3A2AB76C9ED8134E4DEBB7F /* Pods-GYWaterPicTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 79MZ7A623K;
+				INFOPLIST_FILE = GYWaterPicTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lyons.GYWaterPicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GYWaterPic.app/GYWaterPic";
+			};
+			name = Release;
+		};
+		2BC058A420B3C5BB005D716F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 79MZ7A623K;
+				INFOPLIST_FILE = GYWaterPicUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lyons.GYWaterPicUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GYWaterPic;
+			};
+			name = Debug;
+		};
+		2BC058A520B3C5BB005D716F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 79MZ7A623K;
+				INFOPLIST_FILE = GYWaterPicUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lyons.GYWaterPicUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GYWaterPic;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2BC0586C20B3C5BA005D716F /* Build configuration list for PBXProject "GYWaterPic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BC0589B20B3C5BB005D716F /* Debug */,
+				2BC0589C20B3C5BB005D716F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BC0589D20B3C5BB005D716F /* Build configuration list for PBXNativeTarget "GYWaterPic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BC0589E20B3C5BB005D716F /* Debug */,
+				2BC0589F20B3C5BB005D716F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BC058A020B3C5BB005D716F /* Build configuration list for PBXNativeTarget "GYWaterPicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BC058A120B3C5BB005D716F /* Debug */,
+				2BC058A220B3C5BB005D716F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BC058A320B3C5BB005D716F /* Build configuration list for PBXNativeTarget "GYWaterPicUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BC058A420B3C5BB005D716F /* Debug */,
+				2BC058A520B3C5BB005D716F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2BC0586920B3C5BA005D716F /* Project object */;
+}
