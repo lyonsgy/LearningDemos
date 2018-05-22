@@ -21,7 +21,6 @@
     
     AVMutableComposition *mixComposition = [[AVMutableComposition alloc] init];
     
-    
     //3 视频通道
     AVMutableCompositionTrack *videoTrack = [mixComposition addMutableTrackWithMediaType:AVMediaTypeVideo
                                                                         preferredTrackID:kCMPersistentTrackID_Invalid];
@@ -61,7 +60,7 @@
     mainCompositionInst.renderSize = CGSizeMake(renderWidth, renderHeight);
     mainCompositionInst.instructions = [NSArray arrayWithObject:mainInstruction];
     mainCompositionInst.frameDuration = CMTimeMake(1, 30);
-    [self applyVideoEffectsToComposition:mainCompositionInst size:naturalSize];
+    [self applyVideoEffectsToComposition:mainCompositionInst size:naturalSize text:@"水印"];
     
     //    // 4 - 输出路径
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -109,7 +108,7 @@
     [subtitle1Text setFrame:CGRectMake(10, size.height-10-100, size.width, 100)];
     [subtitle1Text setString:text];
     //    [subtitle1Text setAlignmentMode:kCAAlignmentCenter];
-    [subtitle1Text setForegroundColor:[[UIColor whiteColor] CGColor]];
+    [subtitle1Text setForegroundColor:[[UIColor redColor] CGColor]];
     
     //图片
     CALayer*picLayer = [CALayer layer];
@@ -119,6 +118,7 @@
     // 2 - The usual overlay
     CALayer *overlayLayer = [CALayer layer];
     [overlayLayer addSublayer:picLayer];
+    [overlayLayer addSublayer:subtitle1Text];
     overlayLayer.frame = CGRectMake(0, 0, size.width, size.height);
     [overlayLayer setMasksToBounds:YES];
     
@@ -134,4 +134,20 @@
     
 }
 
++(void)getVideoPath:(PHAsset *)asset resultHandler:(void (^)(AVURLAsset *urlAsset))resultHandler{
+    //获取一个资源（PHAsset）
+    PHAsset *phAsset = asset;
+    if (phAsset.mediaType == PHAssetMediaTypeVideo) {
+        PHVideoRequestOptions *options = [[PHVideoRequestOptions alloc] init];
+        options.version = PHImageRequestOptionsVersionCurrent;
+        options.deliveryMode = PHVideoRequestOptionsDeliveryModeAutomatic;
+        
+        PHImageManager *manager = [PHImageManager defaultManager];
+        [manager requestAVAssetForVideo:phAsset options:options resultHandler:^(AVAsset * _Nullable asset, AVAudioMix * _Nullable audioMix, NSDictionary * _Nullable info) {
+            AVURLAsset *urlAsset = (AVURLAsset *)asset;
+            
+            resultHandler(urlAsset);
+        }];
+    }
+}
 @end

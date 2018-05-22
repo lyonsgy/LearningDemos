@@ -8,8 +8,9 @@
 
 #import "ViewController.h"
 #import "GYWaterPicHelper.h"
+#import "TZImagePickerController.h"
 
-@interface ViewController ()
+@interface ViewController ()<TZImagePickerControllerDelegate>
 
 @end
 
@@ -17,14 +18,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+
 }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
 
-
+- (IBAction)buttonClick:(id)sender {
+    TZImagePickerController *imagePickerVc = [[TZImagePickerController alloc] initWithMaxImagesCount:9 delegate:self];
+    
+    [imagePickerVc setDidFinishPickingVideoHandle:^(UIImage *coverImage, id asset) {
+        PHAsset *videoAsset = asset;
+        [GYWaterPicHelper getVideoPath:videoAsset resultHandler:^(AVURLAsset *urlAsset) {
+            [GYWaterPicHelper addWaterPicWithVideoPath:urlAsset.URL.absoluteString];
+        }];
+    }];
+    [self presentViewController:imagePickerVc animated:YES completion:nil];
+}
 @end
