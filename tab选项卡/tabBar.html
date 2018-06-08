@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    {{ message }}
+</div>
+<div id="app-2">
+    <span :title="message">
+        鼠标悬停几秒钟查看此处动态绑定的提示信息！
+    </span>
+</div>
+<div id="app-3">
+    <p v-if="seen">现在你看到我了</p>
+</div>
+<div id="app-4">
+    <ol>
+        <li v-for="todo in todos">
+            {{ todo.test }}
+        </li>
+    </ol>
+</div>
+<div id="app-5">
+    <p>{{ message }}</p>
+    <button @click="reverseMessage">逆转消息</button>
+</div>
+<div id="app-6">
+    <p>{{ message }}</p>
+    <input v-model="message">
+</div>
+<div id="app-7">
+    <ol>
+        <todo-item
+                v-for="item in groceryList"
+                v-bind:todo="item"
+                v-bind:key="item.id">
+        </todo-item>
+    </ol>
+</div>
+<div>
+    <!--通过使用 v-once 指令，你也能执行一次性地插值，当数据改变时，插值处的内容不会更新。但请留心这会影响到该节点上的其它数据绑定-->
+    <span v-once:id="app-8">
+        这个将不会改变：{{ msg }} {{ value }}
+    </span>
+    <p>Using mustaches: {{ rawHtml }}</p>
+    <p>Using v-html directive: <span v-html="rawHtml"></span></p>
+</div>
+<div id="app-9">
+    <p v-if="seen">
+        now,u see me.
+    </p>
+</div>
+<div id="example">
+    <p>Original message: "{{ message }}"</p>
+    <p>Computed reversed message: "{{ reversedMessage }}"</p>
+</div>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue!'
+        }
+    })
+
+    var app2 = new Vue(
+        {
+            el:"#app-2",
+            data:{
+                message:"页面加载于" + new Date().toLocaleString()
+            }
+        }
+    )
+
+    var app3 = new Vue({
+        el: '#app-3',
+        data: {
+            seen: true
+        }
+    })
+
+    var app4 = new Vue({
+        el: "#app-4",
+        data: {
+            todos: [
+                {test:"学习 javaScript"},
+                {test:"学习 Vue"},
+                {test:"整个object"}
+            ]
+        }
+    })
+
+    var app5 = new Vue({
+        el: '#app-5',
+        data: {
+            message: 'Hello Vue.js!'
+        },
+        methods: {
+            reverseMessage: function () {
+                this.message = this.message.split('').reverse().join('')
+            }
+        }
+    })
+
+    var app6 = new Vue({
+        el: '#app-6',
+        data: {
+            message: 'Hello Vue'
+        }
+    })
+
+    Vue.component('todo-item',{
+        props:['todo'],
+        template:'<li>{{ todo.text }}</li>'
+    })
+
+    var app7 = new Vue({
+        el: '#app-7',
+        data: {
+            groceryList: [
+                { id: 0, text: '蔬菜' },
+                { id: 1, text: '奶酪' },
+                { id: 2, text: '其他' }
+            ]
+        }
+    })
+
+    var app8 = new Vue({
+        el: '#app-8',
+        data:{
+            msg: '这是一个标签',
+            value: '这是一句简介'
+        },
+        methods:{
+            //方法
+        }
+    })
+
+    var app9 = new Vue({
+        el:'#app-9',
+        data:{
+            seen: false
+        },
+        methods:{
+
+        }
+    })
+
+    var expmple = new Vue({
+        el: '#example',
+        data: {
+            message: 'hello'
+        },
+        computed: {
+            reversedMessage: function () {
+                return this.message.split('').reverse().join('')
+            }
+        }
+    })
+</script>
+</body>
+</html>
