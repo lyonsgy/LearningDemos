@@ -41,9 +41,9 @@
         </todo-item>
     </ol>
 </div>
-<div>
+<div id="app-8">
     <!--通过使用 v-once 指令，你也能执行一次性地插值，当数据改变时，插值处的内容不会更新。但请留心这会影响到该节点上的其它数据绑定-->
-    <span v-once:id="app-8">
+    <span v-once>
         这个将不会改变：{{ msg }} {{ value }}
     </span>
     <p>Using mustaches: {{ rawHtml }}</p>
@@ -58,6 +58,32 @@
     <p>Original message: "{{ message }}"</p>
     <p>Computed reversed message: "{{ reversedMessage }}"</p>
 </div>
+<div>
+    <template v-if="loginType === 'username'">
+        <label>Username</label>
+        <input placeholder="Enter your username">
+    </template>
+    <template v-else>
+        <label>Email</label>
+        <input placeholder="Enter your email address">
+    </template>
+</div>
+<div id="example-1">
+    <ul>
+        <!--类似"for...in..."遍历数组中的对象-->
+        <li v-for="item in items">
+            {{ item.message }}
+        </li>
+    </ul>
+</div>
+<div id="example-2">
+    <!-- `greet` 是在下面定义的方法名 -->
+    <button v-on:click="greet">Greet</button>
+</div>
+<div id="example-3">
+    <input v-model="message" placeholder="edit me">
+    <p>message is : {{ message }}</p>
+</div>
 <script>
     var app = new Vue({
         el: '#app',
@@ -66,29 +92,28 @@
         }
     })
 
-    var app2 = new Vue(
-        {
-            el:"#app-2",
-            data:{
-                message:"页面加载于" + new Date().toLocaleString()
-            }
+    var app2 = new Vue({
+        el: "#app-2",
+        data: {
+            message: "页面加载于" + new Date().toLocaleString()
         }
-    )
+    })
 
     var app3 = new Vue({
         el: '#app-3',
-        data: {
-            seen: true
-        }
+        data:
+            {
+                seen: true
+            }
     })
 
     var app4 = new Vue({
         el: "#app-4",
         data: {
             todos: [
-                {test:"学习 javaScript"},
-                {test:"学习 Vue"},
-                {test:"整个object"}
+                {test: "学习 javaScript"},
+                {test: "学习 Vue"},
+                {test: "整个object"}
             ]
         }
     })
@@ -112,44 +137,42 @@
         }
     })
 
-    Vue.component('todo-item',{
-        props:['todo'],
-        template:'<li>{{ todo.text }}</li>'
+    Vue.component('todo-item', {
+        props: ['todo'],
+        template: '<li>{{ todo.text }}</li>'
     })
 
     var app7 = new Vue({
         el: '#app-7',
         data: {
             groceryList: [
-                { id: 0, text: '蔬菜' },
-                { id: 1, text: '奶酪' },
-                { id: 2, text: '其他' }
+                {id: 0, text: '蔬菜'},
+                {id: 1, text: '奶酪'},
+                {id: 2, text: '其他'}
             ]
         }
     })
 
     var app8 = new Vue({
         el: '#app-8',
-        data:{
+        data: {
             msg: '这是一个标签',
             value: '这是一句简介'
         },
-        methods:{
+        methods: {
             //方法
         }
     })
 
     var app9 = new Vue({
-        el:'#app-9',
-        data:{
+        el: '#app-9',
+        data: {
             seen: false
         },
-        methods:{
-
-        }
+        methods: {}
     })
 
-    var expmple = new Vue({
+    var example = new Vue({
         el: '#example',
         data: {
             message: 'hello'
@@ -160,6 +183,40 @@
             }
         }
     })
+
+    var example1 = new Vue({
+        el: '#example-1',
+        data: {
+            items: [
+                {message: 'foo'},
+                {message: 'bar'}
+            ]
+        }
+    })
+
+    var example2 = new Vue({
+        el: '#example-2',
+        data: {
+            name: 'Vue.js'
+        },
+        methods: {
+            greet: function (event) {
+                alert('hello' + this.name + '!')
+
+                if (event) {
+                    alert(event.target.tagName)
+                }
+            }
+        }
+    })
+
+    var example3 = new Vue({
+        el: '#example-3',
+        data: {
+            message: ''
+        }
+    })
+
 </script>
 </body>
 </html>
