@@ -4,13 +4,30 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="css/nplus-shop.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script>
+        var deviceWidth = document.documentElement.clientWidth;
+        if (deviceWidth > 750) deviceWidth = 750;
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+        window.onresize = function () {
+            var deviceWidth = document.documentElement.clientWidth;
+            if (deviceWidth > 750) deviceWidth = 750;
+            document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+        };
+    </script>
     <style>
-        .iframe_a {
-            background-color: 0;
-            position: absolute;
-            width: 100%;
-            height: calc(100% - 98px);
-            border: 0;
+        body {
+            font-family: "微软雅黑";
+            width: 6.4rem;
+            margin: 0 auto;
+            font-size: .24rem;
+            color: #4f4f4f;
+            background: #f3f3f3;
+            word-break: break-all;
+            word-wrap: break-word;
         }
 
         ul {
@@ -66,19 +83,18 @@
 
     </style>
 </head>
-
 <body>
-<iframe id="iframe_a" class="iframe_a" name="iframe_a"></iframe>
-<ul>
-    <li><a id="game" href="nplus-game.html" target="iframe_a" onclick="homeClick()">GAME</a></li>
-    <li class="line"></li>
-    <li><a href="">WVI</a></li>
-    <li class="line"></li>
-    <li><a id="ip" href="nplus-ip-home.html" target="iframe_a" onclick="ipClick()">IP</a></li>
-    <li class="line"></li>
-    <li><a href="">ABOUT</a></li>
-
-</ul>
+<div class="body">
+    <ul>
+        <li><a id="game" href="nplus-game.html" target="iframe_a" onclick="homeClick()">GAME</a></li>
+        <li class="line"></li>
+        <li><a href="">WVI</a></li>
+        <li class="line"></li>
+        <li><a id="ip" href="nplus-ip-home.html" target="iframe_a" onclick="ipClick()">IP</a></li>
+        <li class="line"></li>
+        <li><a href="">ABOUT</a></li>
+    </ul>
+</div>
 </body>
 
 <script>

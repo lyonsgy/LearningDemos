@@ -82,7 +82,20 @@
 </div>
 <div id="example-3">
     <input v-model="message" placeholder="edit me">
-    <p>message is : {{ message }}</p>
+    <p>message is : {{ message }} {{ message }}</p>
+</div>
+<div id="components-demo">
+    <button-counter></button-counter>
+</div>
+<div id="blog-posts-events-demo">
+    <div :style="{ fontSize: postFontSize + 'em' }">
+        <blog-post v-for="post in posts" v-bind:key="post.id" v-bind:post="post">
+
+        </blog-post>
+        <button>
+            Enlarge text
+        </button>
+    </div>
 </div>
 <script>
     var app = new Vue({
@@ -213,10 +226,42 @@
     var example3 = new Vue({
         el: '#example-3',
         data: {
-            message: ''
+            message: '',
+            message: ""
         }
     })
 
+    Vue.component('button-counter', {
+        data: function () {
+            return {
+                count: 0
+            }
+        },
+        template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
+    })
+
+    new Vue({el: '#components-demo'})
+
+    new Vue({
+        el: '#blog-posts-events-demo',
+        data: {
+            posts: [],
+            postFontSize: 1
+        }
+    })
+
+    Vue.component('blog-post', {
+        props: ['post'],
+        template: `
+    <div class="blog-post">
+      <h3>{{ post.title }}</h3>
+      <button>
+        Enlarge text
+      </button>
+      <div v-html="post.content"></div>
+    </div>
+  `
+    })
 </script>
 </body>
 </html>

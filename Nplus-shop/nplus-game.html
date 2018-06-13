@@ -5,7 +5,20 @@
     <meta charset="UTF-8">
     <title>game</title>
     <link rel="stylesheet" href="css/nplus-shop.css">
-    <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script>
+        var deviceWidth = document.documentElement.clientWidth;
+        if (deviceWidth > 750) deviceWidth = 750;
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+        window.onresize = function () {
+            var deviceWidth = document.documentElement.clientWidth;
+            if (deviceWidth > 750) deviceWidth = 750;
+            document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+        };
+    </script>
 </head>
 
 <body>
@@ -30,13 +43,14 @@
 
 <!--js-->
 <script>
-    var data = [{
-        title: "nightmare escape",
-        content: "逃离梦魇",
-        price: 0,
-        gameType: "冒险游戏",
-        image: "game0.png"
-    },
+    var data = [
+        {
+            title: "nightmare escape",
+            content: "逃离梦魇",
+            price: 0,
+            gameType: "冒险游戏",
+            image: "game0.png"
+        },
         {
             title: "Dead Area",
             content: "亡命战场",
@@ -66,13 +80,13 @@
 
     /* 根据 className 创建 backView */
     function creatBackView(index) {
-        var backDiv = document.createElement("div");
-        backDiv.className = "backView";
-        backDiv.id = "backView" + index;
-        var divWidth = window.innerWidth - 82;
+        var backDiv = document.createElement("li");
+        backDiv.className = "item-list";
+        backDiv.id = "item-list" + index;
+        var divWidth = 7.5 - 0.82;
         var aspectRatio = 668 / 824; //宽高比
-        backDiv.style.width = divWidth + "px";
-        backDiv.style.height = divWidth / aspectRatio + "px";
+        backDiv.style.width = divWidth + "rem";
+        backDiv.style.height = divWidth / aspectRatio + "rem";
 
         var titleDiv = document.createElement("div");
         var contentDiv = document.createElement("div");
@@ -110,7 +124,6 @@
         gameTypeDiv.innerText = game.gameType;
         backDiv.style.background = "url(image/" + game.image + ")";
         backDiv.style.backgroundSize = "cover";
-
         return backDiv;
     }
 
@@ -124,9 +137,21 @@
 
     /* 创建 number 个 backView */
     function creatBackViews(number) {
+        var bodyDiv = document.createElement("div");
+        var mainDiv = document.createElement("div");
+        var footerDiv = document.createElement("div");
+        bodyDiv.className = "body";
+        mainDiv.className = "main";
+        footerDiv.className = "footer";
+        document.body.appendChild(bodyDiv);
+        bodyDiv.appendChild(mainDiv);
+        bodyDiv.appendChild(footerDiv);
+
+        var ul
+
         for (var i = 0; i < number; i++) {
             var backDiv = creatBackView(i);
-            document.body.appendChild(backDiv);
+            mainDiv.appendChild(backDiv);
         }
     }
 
