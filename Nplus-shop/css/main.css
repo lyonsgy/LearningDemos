@@ -1,38 +1,38 @@
-* {
-    margin: 0 auto;
-    padding: 0;
-}
-
 body {
     font-family: "微软雅黑";
-    width: 6.4rem;
-    margin: 0 auto;
+    width: 100%;
     padding: 0;
     font-size: .24rem;
     color: #4f4f4f;
     background: #f3f3f3;
     word-break: break-all;
     word-wrap: break-word;
+    margin: 0 auto;
+}
+
+* {
+    margin: 0 auto;
+    padding: 0;
 }
 
 ul, li {
     list-style-type: none;
 }
 
-ul {
-    position: absolute;
-    bottom: 0;
+li {
+    float: left;
+    height: .98rem;
+    opacity: .9;
     list-style-type: none;
     margin: 0 auto;
     overflow: hidden;
     width: 100%;
 }
 
-li {
+.barItem {
     float: left;
-    width: calc(25% - .02rem);
-    height: 98px;
-    background-color: #fff;
+    width: 25%;
+    height: .98rem;
     opacity: .9;
 }
 
@@ -50,8 +50,8 @@ li {
     border-color: #fff;
 }
 
-a:link,
-a:visited {
+.footer a:link,
+.footer a:visited {
     display: block;
     font-weight: bold;
     color: #626262;
@@ -63,30 +63,19 @@ a:visited {
     padding: .37rem;
 }
 
-a:hover,
-a:active {
+.footer a:hover,
+.footer a:active {
     background-color: #fff;
     color: #000;
 }
 
-.body {
+.bodyView {
     margin: 0 auto;
-    padding: 0;
-    width: 100%;
-    background-color: #F7CC45;
-}
-
-.main {
-    padding: 0;
-    width: 100%;
-    background-color: #fff;
-    overflow: auto;
-    margin-bottom: .98rem;
+    padding: 0 auto;
 }
 
 .footer {
     position: fixed;
-    position: absolute;
     margin-left: 0 auto;
     bottom: 0rem;
     width: 100%;
@@ -94,55 +83,45 @@ a:active {
     background-color: #000;
 }
 
-.item-list {
-    /*margin: 0 auto;*/
+.bottom {
+    position: absolute;
+    bottom: .4rem;
+    left: .44rem;
+}
+
+.game-item-list {
     position: relative;
     background-size: cover;
-    top: 2rem;
     width: 6.68rem;
-    /*height: 8.24rem;*/
-    width: calc(100% - .8rem);
     margin-bottom: .6rem;
     margin-left: .4rem;
     margin-right: .4rem;
 }
 
-.title {
+.game-title {
+    margin-left: .44rem;
+    margin-top: 1.05rem;
     color: #fff;
-    position: absolute;
     font-size: .7rem;
-    /*line-height: 1.1rem;*/
-    width: 2.8rem;
-    top: 1.1rem;
-    left: .4rem;
 }
 
-.content {
+.game-content {
+    margin-left: .44rem;
     color: #fff;
-    position: absolute;
     font-size: .3rem;
-    top: 2.4rem;
-    left: .4rem;
-    width: 2.8rem;
 }
 
-.price {
+.game-price {
     color: #fff;
-    position: absolute;
     font-size: .2rem;
-    bottom: .7rem;
-    left: .4rem;
 }
 
-.gameType {
+.game-type {
     color: #fff;
-    position: absolute;
     font-size: .2rem;
-    bottom: .4rem;
-    left: .4rem;
 }
 
-button.open {
+button.game-open {
     background-color: white;
     position: absolute;
     color: #000;
@@ -155,3 +134,108 @@ button.open {
     vertical-align: middle;
     border-radius: .35rem;
 }
+
+.IP-item-list {
+    position: relative;
+    background-size: cover;
+    width: 6.68rem;
+    margin-bottom: .6rem;
+    margin-left: .4rem;
+    margin-right: .4rem;
+}
+
+.IP-title {
+    margin-left: .44rem;
+    margin-top: 1.05rem;
+    color: #1B1B1B;
+    font-size: .7rem;
+}
+
+.IP-content {
+    margin-left: .44rem;
+    color: #1B1B1B;
+    font-size: .3rem;
+}
+
+.IP-price {
+    color: #1B1B1B;
+    font-size: .2rem;
+}
+
+.IP-type {
+    color: #1B1B1B;
+    font-size: .2rem;
+}
+
+button.IP-open {
+    background-color: #5F52A0;
+    position: absolute;
+    color: #fff;
+    font-size: .3rem;
+    bottom: .4rem;
+    right: .4rem;
+    width: 1.8rem;
+    height: .7rem;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: .35rem;
+}
+
+.tab-nav {
+    height: 1.06rem;
+    margin: 1.62rem .41rem 0 .41rem;
+}
+
+.tab-nav li {
+    width: 50%;
+    height: 1.06rem;
+    float: left;
+    background-color: #767676;
+}
+
+.tab-nav li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: .3rem;
+    padding-top: .32rem;
+    padding-bottom: .32rem;
+}
+
+.tab-nav li.actived {
+    background-color: white;
+}
+
+.tab-nav li.actived {
+    border-bottom: .04rem solid #54c9e8;
+    /*border-bottom: .2rem;*/
+}
+
+.tab-nav li.actived a {
+    color: #777;
+}
+
+.content-wrap {
+    background-color: white;
+}
+
+.content-wrap .content-item {
+    position: absolute;
+    display: none;
+    background-color: #5F52A0;
+    margin-top: .65rem;
+    width: 100%;
+    overflow: auto;
+    margin-bottom: .98rem;
+}
+
+.content-wrap .current {
+    display: block;
+}
+
+/*li::after{*/
+/*width: .23rem;*/
+/*margin-top: .2rem;*/
+/*content: "123";*/
+/*}*/

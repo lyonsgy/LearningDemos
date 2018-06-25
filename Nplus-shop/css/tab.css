@@ -1,0 +1,50 @@
+.js-tab {
+    width: 300px;
+
+}
+
+.js-tab .tab-nav {
+    height: 30px;
+
+}
+
+.js-tab .tab-nav li {
+    float: left;
+    margin-right: 5px;
+    background-color: #767676;
+    border-radius: 3px 3px 0 0;
+}
+
+.js-tab .tab-nav li a {
+    display: block;
+    height: 30px;
+    padding: 0 20px;
+    color: white;
+    line-height: 30px;
+    text-decoration: none;
+}
+
+.js-tab .tab-nav li.actived {
+    background-color: white;
+}
+
+.js-tab .tab-nav li.actived a {
+    color: #777;
+}
+
+.js-tab .content-wrap {
+    background-color: white;
+    padding: 5px;
+    height: 200px;
+}
+
+.js-tab .content-wrap .content-item {
+    position: absolute;
+    height: 200px;
+    display: none;
+}
+
+.js-tab .content-wrap .current {
+    display: block;
+    
+}
