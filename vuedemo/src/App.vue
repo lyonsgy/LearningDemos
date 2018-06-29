@@ -6,7 +6,6 @@
 
 <script>
   import './assets/js/reset.js'
-
   export default {
     name: 'App'
   }

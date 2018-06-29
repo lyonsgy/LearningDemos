@@ -3,7 +3,7 @@
     <div class="main" style="background-color: #F7CC45">
       <ul>
         <li class="game-item-list" v-for="item in items" :style="{background: 'url(' + item.cover + ')'}">
-          <a>
+          <a class="top">
             <h1 class="game-title">{{ item.title }}<br/>{{ item.message }}</h1>
             <h2 class="game-content">{{ item.content }}</h2>
           </a>
@@ -24,7 +24,6 @@
 
 <script>
   export default {
-    name: 'HelloWorld',
     data() {
       return {
         cur: 0,
@@ -67,5 +66,5 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="stylus">
-  @import "./HelloWorld.styl"
+  @import "./Game.styl"
 </style>
